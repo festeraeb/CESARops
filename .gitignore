@@ -144,10 +144,15 @@ Thumbs.db
 
 # IDE files
 .vscode/settings.json
+.vscode/
 .idea/
 *.swp
 *.swo
 *~
+
+# VS Code specific
+.vs/
+*.vsidx
 
 # Windows specific
 Thumbs.db
