@@ -21,19 +21,48 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libproj-dev proj-data proj-bin libgeos-dev
+        sudo apt-get install -y libhdf5-dev libnetcdf-dev
+        sudo apt-get install -y libcairo2-dev libpango1.0-dev libgdk-pixbuf2.0-dev
+
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        python -m pip install --upgrade pip setuptools wheel
+        # Install core dependencies from CI-specific requirements
+        pip install -r requirements-ci.txt
+        # Install optional dependencies for CI testing
+        pip install flake8 pytest
+
+    - name: Verify installation
+      run: |
+        python -c "import numpy; print('NumPy:', numpy.__version__)"
+        python -c "import matplotlib; print('Matplotlib:', matplotlib.__version__)"
+        python -c "import pandas; print('Pandas:', pandas.__version__)"
 
     - name: Run tests
       run: |
+        # Set environment variable to skip interactive prompts
+        export CESAROPS_TEST_MODE=1
+        export HEADLESS=1
+        # Run simple CI tests first
+        python test_ci.py
+        # Run full test suite if simple tests pass
         python test_ml_enhancements.py
 
     - name: Check code formatting
       run: |
         # Basic syntax check
-        python -m py_compile sarops.py cesarops.py test_ml_enhancements.py
+        python -m py_compile sarops.py cesarops.py test_ml_enhancements.py test_ci.py
+        # Check for specific integration files if they exist
+        if [ -f "cesarops_integrated.py" ]; then
+          python -m py_compile cesarops_integrated.py
+        fi
+        if [ -f "garmin_rsd_integration.py" ]; then
+          python -m py_compile garmin_rsd_integration.py
+        fi
 
   lint:
     runs-on: ubuntu-latest
@@ -52,7 +81,14 @@ jobs:
 
     - name: Run linting
       run: |
-        # Stop the build if there are Python syntax errors or undefined names
-        flake8 sarops.py cesarops.py test_ml_enhancements.py --count --select=E9,F63,F7,F82 --show-source --statistics
-        # Exit-zero treats all errors as warnings
-        flake8 sarops.py cesarops.py test_ml_enhancements.py --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        # Check for basic syntax errors and undefined names
+        flake8 sarops.py cesarops.py test_ml_enhancements.py test_ci.py --count --select=E9,F63,F7,F82 --show-source --statistics --exclude=__pycache__
+        # Check integration files if they exist
+        if [ -f "cesarops_integrated.py" ]; then
+          flake8 cesarops_integrated.py --count --select=E9,F63,F7,F82 --show-source --statistics --exclude=__pycache__
+        fi
+        if [ -f "garmin_rsd_integration.py" ]; then
+          flake8 garmin_rsd_integration.py --count --select=E9,F63,F7,F82 --show-source --statistics --exclude=__pycache__
+        fi
+        # Check for style issues but don't fail the build
+        flake8 sarops.py cesarops.py test_ml_enhancements.py test_ci.py --count --exit-zero --max-complexity=15 --max-line-length=150 --statistics --exclude=__pycache__ --ignore=E203,W503,E501

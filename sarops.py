@@ -1,8 +1,11 @@
-print("CESAROPS starting...")
-input("Press Enter to continue...")  # This will pause so you can see any error messages
-
 import os
 import sys
+
+print("CESAROPS starting...")
+# Skip interactive prompt in headless/CI mode
+if not os.getenv('HEADLESS') and not os.getenv('CESAROPS_TEST_MODE'):
+    input("Press Enter to continue...")  # This will pause so you can see any error messages
+
 import logging
 
 # Set up logging
@@ -2630,4 +2633,6 @@ if __name__ == "__main__":
         print(f"Error starting application: {e}")
         import traceback
         traceback.print_exc()
-        input("Press Enter to exit...")
+        # Skip interactive prompt in headless/CI mode
+        if not os.getenv('HEADLESS') and not os.getenv('CESAROPS_TEST_MODE'):
+            input("Press Enter to exit...")

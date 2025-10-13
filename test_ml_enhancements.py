@@ -7,6 +7,11 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
+# Set CI test mode if environment variable is set
+if os.getenv('CESAROPS_TEST_MODE'):
+    # Skip interactive prompts in CI
+    os.environ['HEADLESS'] = '1'
+
 from sarops import (
     init_drift_db,
     fetch_buoy_specifications,
