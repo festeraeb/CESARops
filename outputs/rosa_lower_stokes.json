@@ -1,0 +1,106 @@
+{
+  "test_type": "lower_stokes_drift",
+  "user_position": {
+    "lat": 42.995,
+    "lon": -87.845,
+    "time": "2025-08-22 20:00:00"
+  },
+  "best_result": {
+    "name": "Pure Current",
+    "predicted_position": {
+      "lat": 43.094314810304226,
+      "lon": -88.22650746541942
+    },
+    "prediction_error_nm": 95.40889239004355,
+    "predicted_drift_nm": 17.77040804510001,
+    "drift_error_nm": 59.978570850135796,
+    "specs": {
+      "windage": 0.01,
+      "leeway": 0.01,
+      "stokes_factor": 0.0
+    }
+  },
+  "all_results": [
+    {
+      "name": "Ultra-Low Stokes",
+      "predicted_position": {
+        "lat": 43.15137274916,
+        "lon": -89.0171262945473
+      },
+      "prediction_error_nm": 128.7792631223564,
+      "predicted_drift_nm": 52.25752379685197,
+      "drift_error_nm": 25.491455098383838,
+      "specs": {
+        "windage": 0.025,
+        "leeway": 0.025,
+        "stokes_factor": 0.001
+      }
+    },
+    {
+      "name": "Minimal Stokes",
+      "predicted_position": {
+        "lat": 43.112446561572554,
+        "lon": -88.78872546874999
+      },
+      "prediction_error_nm": 118.5741513791356,
+      "predicted_drift_nm": 41.999464489373565,
+      "drift_error_nm": 35.74951440586224,
+      "specs": {
+        "windage": 0.02,
+        "leeway": 0.02,
+        "stokes_factor": 0.002
+      }
+    },
+    {
+      "name": "No Stokes",
+      "predicted_position": {
+        "lat": 43.27153254920666,
+        "lon": -89.10224314337603
+      },
+      "prediction_error_nm": 134.81700509204893,
+      "predicted_drift_nm": 57.53373033760859,
+      "drift_error_nm": 20.21524855762722,
+      "specs": {
+        "windage": 0.025,
+        "leeway": 0.03,
+        "stokes_factor": 0.0
+      }
+    },
+    {
+      "name": "Current Dominant",
+      "predicted_position": {
+        "lat": 43.10328804766702,
+        "lon": -88.50750126815541
+      },
+      "prediction_error_nm": 106.89440984614285,
+      "predicted_drift_nm": 29.7858610226679,
+      "drift_error_nm": 47.963117872567906,
+      "specs": {
+        "windage": 0.015,
+        "leeway": 0.015,
+        "stokes_factor": 0.001
+      }
+    },
+    {
+      "name": "Pure Current",
+      "predicted_position": {
+        "lat": 43.094314810304226,
+        "lon": -88.22650746541942
+      },
+      "prediction_error_nm": 95.40889239004355,
+      "predicted_drift_nm": 17.77040804510001,
+      "drift_error_nm": 59.978570850135796,
+      "specs": {
+        "windage": 0.01,
+        "leeway": 0.01,
+        "stokes_factor": 0.0
+      }
+    }
+  ],
+  "improvement_nm": 51.391107609956464,
+  "physics_insights": {
+    "optimal_stokes": 0.0,
+    "drift_type": "current_and_wind_dominated",
+    "wave_sensitivity": "low"
+  }
+}

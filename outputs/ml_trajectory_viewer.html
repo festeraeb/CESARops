@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CESAROPS ML Trajectory Visualization</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+        }
+        #map { 
+            height: 90vh; 
+            width: 100%; 
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .info-panel {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 1000;
+            max-width: 300px;
+        }
+        .trajectory-point {
+            background: #3498db;
+            color: white;
+            border-radius: 3px;
+            padding: 2px 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>🌊 CESAROPS ML-Enhanced Drift Prediction</h2>
+        <p>Rosa Fender Case - 24-Hour ML Trajectory Forecast</p>
+    </div>
+    
+    <div class="info-panel">
+        <h3>📊 Trajectory Details</h3>
+        <p><strong>Start:</strong> 42.995°N, 87.845°W</p>
+        <p><strong>End:</strong> 45.186°N, 87.470°W</p>
+        <p><strong>Duration:</strong> 24 hours</p>
+        <p><strong>Distance:</strong> 246.77 km</p>
+        <p><strong>Model:</strong> ML Ensemble</p>
+        <p><strong>Training Data:</strong> 1,080 real drifter points</p>
+        <hr>
+        <p><strong>🔵 Blue Line:</strong> ML Predicted Path</p>
+        <p><strong>🟢 Green Marker:</strong> Start Position</p>
+        <p><strong>🔴 Red Marker:</strong> End Position</p>
+    </div>
+    
+    <div id="map"></div>
+
+    <script>
+        // Initialize the map centered on Lake Michigan
+        var map = L.map('map').setView([44.0, -87.5], 8);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // ML Predicted trajectory coordinates from our KML
+        var trajectoryCoords = [
+            [42.995000, -87.845000],  // Start
+            [43.781885, -87.649211],
+            [44.244815, -87.553130],
+            [44.689889, -87.507160],
+            [44.933834, -87.485854],
+            [45.058074, -87.476361],
+            [45.121430, -87.472265],
+            [45.153745, -87.470555],
+            [45.170222, -87.469871],
+            [45.178619, -87.469613],
+            [45.182896, -87.469526],
+            [45.185073, -87.469502],
+            [45.186181, -87.469500]   // End
+        ];
+
+        // Create the trajectory line
+        var trajectoryLine = L.polyline(trajectoryCoords, {
+            color: 'blue',
+            weight: 4,
+            opacity: 0.8
+        }).addTo(map);
+
+        // Add start marker (green)
+        var startMarker = L.marker([42.995000, -87.845000], {
+            icon: L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })
+        }).addTo(map);
+
+        startMarker.bindPopup(`
+            <b>🚨 Rosa Fender Case - Start Position</b><br>
+            <strong>Location:</strong> 42.995°N, 87.845°W<br>
+            <strong>Time:</strong> August 22, 8:00 PM<br>
+            <strong>Object:</strong> Life jacket fender<br>
+            <strong>ML Prediction:</strong> Starting point
+        `);
+
+        // Add end marker (red)
+        var endMarker = L.marker([45.186181, -87.469500], {
+            icon: L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })
+        }).addTo(map);
+
+        endMarker.bindPopup(`
+            <b>🎯 24-Hour ML Prediction</b><br>
+            <strong>Location:</strong> 45.186°N, 87.470°W<br>
+            <strong>Distance:</strong> 246.77 km from start<br>
+            <strong>Model:</strong> Ensemble (Simple Regression + Random Forest)<br>
+            <strong>Confidence:</strong> R² > 0.999<br>
+            <strong>Training Data:</strong> 1,080 real drifter points
+        `);
+
+        // Add intermediate points with time labels
+        var timeLabels = [
+            '0h', '2h', '4h', '6h', '8h', '10h', '12h', 
+            '14h', '16h', '18h', '20h', '22h', '24h'
+        ];
+
+        trajectoryCoords.forEach(function(coord, index) {
+            if (index > 0 && index < trajectoryCoords.length - 1) {
+                var marker = L.circleMarker(coord, {
+                    radius: 5,
+                    fillColor: '#3498db',
+                    color: 'white',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                }).addTo(map);
+
+                marker.bindPopup(`
+                    <b>⏰ ${timeLabels[index]} Mark</b><br>
+                    <strong>Position:</strong> ${coord[0].toFixed(3)}°N, ${coord[1].toFixed(3)}°W<br>
+                    <strong>Time:</strong> ${timeLabels[index]} after start<br>
+                    <strong>ML Prediction</strong>
+                `);
+            }
+        });
+
+        // Fit map to show entire trajectory
+        map.fitBounds(trajectoryLine.getBounds(), {padding: [20, 20]});
+
+        // Add a custom control with information
+        var info = L.control({position: 'bottomleft'});
+        info.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'info');
+            div.innerHTML = `
+                <div style="background: white; padding: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+                    <h4>🧠 ML Model Performance</h4>
+                    <p><strong>Simple Regression:</strong> R² = 0.9999</p>
+                    <p><strong>Random Forest:</strong> R² = 0.9999</p>
+                    <p><strong>Training Samples:</strong> 472 trajectories</p>
+                    <p><strong>Data Sources:</strong> NOAA GDP, GLOS, NDBC</p>
+                </div>
+            `;
+            return div;
+        };
+        info.addTo(map);
+
+        // Add scale
+        L.control.scale().addTo(map);
+    </script>
+</body>
+</html>

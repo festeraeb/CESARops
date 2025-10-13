@@ -1,0 +1,18 @@
+{
+  "case_summary": {
+    "vessel": "Rosa",
+    "victim": "Charlie Brown",
+    "release_time": "2025-08-22T21:00:00",
+    "recovery_time": "2025-08-28T16:00:00",
+    "predicted_position": {
+      "lat": 43.505617320705916,
+      "lon": -89.95638047952
+    },
+    "actual_position": {
+      "lat": 42.4,
+      "lon": -86.28
+    },
+    "prediction_error_nm": 174.64272436194787,
+    "accuracy_rating": "POOR - Further analysis needed"
+  }
+}

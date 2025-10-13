@@ -1,0 +1,551 @@
+{
+  "analysis_timestamp": "2025-10-12T21:59:31.966741",
+  "timeline_analysis": {},
+  "boat_capability_analysis": {
+    "departure_time": "2025-08-22 15:00:00 CST",
+    "estimated_drop_time": "2025-08-22 17:30:00 CST",
+    "available_time_hours": 2.5,
+    "distance_to_drop_nm": 4.994426744547817,
+    "required_speed_kts": 1.9977706978191268,
+    "vessel_capability_kts": 8,
+    "feasible": true,
+    "speed_margin_kts": 6.002229302180873
+  },
+  "hindcast_scenarios": [
+    {
+      "scenario_id": 15,
+      "start_lat": 42.904999999999994,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.87317012586848,
+      "end_lon": -87.64338775643932,
+      "distance_to_found_km": 123.53964603579854,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 30,
+      "start_lat": 42.91785714285714,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.88602726872562,
+      "end_lon": -87.6433944573787,
+      "distance_to_found_km": 124.14142598355441,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 45,
+      "start_lat": 42.93071428571428,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.89888441158276,
+      "end_lon": -87.64340116273307,
+      "distance_to_found_km": 124.75668538123809,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 14,
+      "start_lat": 42.904999999999994,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.87317012586848,
+      "end_lon": -87.66053061358218,
+      "distance_to_found_km": 124.8115347120826,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 60,
+      "start_lat": 42.943571428571424,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.91174155443991,
+      "end_lon": -87.64340787250583,
+      "distance_to_found_km": 125.3852257999277,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 29,
+      "start_lat": 42.91785714285714,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.88602726872562,
+      "end_lon": -87.66053731452156,
+      "distance_to_found_km": 125.40695600988725,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 44,
+      "start_lat": 42.93071428571428,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.89888441158276,
+      "end_lon": -87.66054401987593,
+      "distance_to_found_km": 126.01578243751486,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 75,
+      "start_lat": 42.95642857142857,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.92459869729705,
+      "end_lon": -87.64341458670047,
+      "distance_to_found_km": 126.02684852835189,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 13,
+      "start_lat": 42.904999999999994,
+      "start_lon": -87.64555470639752,
+      "end_lat": 42.87317012586848,
+      "end_lon": -87.67767347072504,
+      "distance_to_found_km": 126.08618670140399,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 59,
+      "start_lat": 42.943571428571424,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.91174155443991,
+      "end_lon": -87.66055072964869,
+      "distance_to_found_km": 126.63782065483024,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 28,
+      "start_lat": 42.91785714285714,
+      "start_lon": -87.64555470639752,
+      "end_lat": 42.88602726872562,
+      "end_lon": -87.67768017166442,
+      "distance_to_found_km": 126.67536064404192,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 90,
+      "start_lat": 42.96928571428571,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.93745584015419,
+      "end_lon": -87.64342130532042,
+      "distance_to_found_km": 126.68135478664944,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 74,
+      "start_lat": 42.95642857142857,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.92459869729705,
+      "end_lon": -87.66055744384333,
+      "distance_to_found_km": 127.27287694659992,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 43,
+      "start_lat": 42.93071428571428,
+      "start_lon": -87.64555470639752,
+      "end_lat": 42.89888441158276,
+      "end_lon": -87.67768687701879,
+      "distance_to_found_km": 127.27786488798692,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 105,
+      "start_lat": 42.982142857142854,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.95031298301134,
+      "end_lon": -87.64342802836912,
+      "distance_to_found_km": 127.34854593075453,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 12,
+      "start_lat": 42.904999999999994,
+      "start_lon": -87.66269756354038,
+      "end_lat": 42.87317012586848,
+      "end_lon": -87.6948163278679,
+      "distance_to_found_km": 127.36351898663916,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 58,
+      "start_lat": 42.943571428571424,
+      "start_lon": -87.64555470639752,
+      "end_lat": 42.91174155443991,
+      "end_lon": -87.67769358679155,
+      "distance_to_found_km": 127.89351103688071,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 89,
+      "start_lat": 42.96928571428571,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.93745584015419,
+      "end_lon": -87.66056416246327,
+      "distance_to_found_km": 127.92075743020409,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 27,
+      "start_lat": 42.91785714285714,
+      "start_lon": -87.66269756354038,
+      "end_lat": 42.88602726872562,
+      "end_lon": -87.69482302880728,
+      "distance_to_found_km": 127.94655434199282,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 120,
+      "start_lat": 42.995,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.96317012586848,
+      "end_lon": -87.64343475585002,
+      "distance_to_found_km": 128.02822364728019,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 73,
+      "start_lat": 42.95642857142857,
+      "start_lon": -87.64555470639752,
+      "end_lat": 42.92459869729705,
+      "end_lon": -87.67770030098619,
+      "distance_to_found_km": 128.52211023394864,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 42,
+      "start_lat": 42.93071428571428,
+      "start_lon": -87.66269756354038,
+      "end_lat": 42.89888441158276,
+      "end_lon": -87.69482973416164,
+      "distance_to_found_km": 128.5428447463754,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 104,
+      "start_lat": 42.982142857142854,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.95031298301134,
+      "end_lon": -87.66057088551197,
+      "distance_to_found_km": 128.58126825460806,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 11,
+      "start_lat": 42.904999999999994,
+      "start_lon": -87.67984042068322,
+      "end_lat": 42.87317012586848,
+      "end_lon": -87.71195918501074,
+      "distance_to_found_km": 128.64345167617944,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 135,
+      "start_lat": 43.007857142857134,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.976027268725616,
+      "end_lon": -87.64344148776662,
+      "distance_to_found_km": 128.72019013885478,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 57,
+      "start_lat": 42.943571428571424,
+      "start_lon": -87.66269756354038,
+      "end_lat": 42.91174155443991,
+      "end_lon": -87.6948364439344,
+      "distance_to_found_km": 129.1522066058744,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 88,
+      "start_lat": 42.96928571428571,
+      "start_lon": -87.64555470639752,
+      "end_lat": 42.93745584015419,
+      "end_lon": -87.67770701960613,
+      "distance_to_found_km": 129.16347336373377,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 26,
+      "start_lat": 42.91785714285714,
+      "start_lon": -87.67984042068322,
+      "end_lat": 42.88602726872562,
+      "end_lon": -87.71196588595012,
+      "distance_to_found_km": 129.22045474086747,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 119,
+      "start_lat": 42.995,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.96317012586848,
+      "end_lon": -87.66057761299288,
+      "distance_to_found_km": 129.25421579044755,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 150,
+      "start_lat": 43.02071428571428,
+      "start_lon": -87.6112689921118,
+      "end_lat": 42.98888441158276,
+      "end_lon": -87.64344822412237,
+      "distance_to_found_km": 129.42424829989363,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 72,
+      "start_lat": 42.95642857142857,
+      "start_lon": -87.66269756354038,
+      "end_lat": 42.92459869729705,
+      "end_lon": -87.69484315812905,
+      "distance_to_found_km": 129.77445578778787,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 41,
+      "start_lat": 42.93071428571428,
+      "start_lon": -87.67984042068322,
+      "end_lat": 42.89888441158276,
+      "end_lon": -87.71197259130449,
+      "distance_to_found_km": 129.81063725741572,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 103,
+      "start_lat": 42.982142857142854,
+      "start_lon": -87.64555470639752,
+      "end_lat": 42.95031298301134,
+      "end_lon": -87.67771374265483,
+      "distance_to_found_km": 129.81741124568438,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 10,
+      "start_lat": 42.904999999999994,
+      "start_lon": -87.69698327782608,
+      "end_lat": 42.87317012586848,
+      "end_lon": -87.7291020421536,
+      "distance_to_found_km": 129.92590786654182,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 134,
+      "start_lat": 43.007857142857134,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.976027268725616,
+      "end_lon": -87.66058434490948,
+      "distance_to_found_km": 129.93940681116695,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 165,
+      "start_lat": 43.03357142857142,
+      "start_lon": -87.6112689921118,
+      "end_lat": 43.0017415544399,
+      "end_lon": -87.6434549649207,
+      "distance_to_found_km": 130.1402018828409,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 87,
+      "start_lat": 42.96928571428571,
+      "start_lon": -87.66269756354038,
+      "end_lat": 42.93745584015419,
+      "end_lon": -87.69484987674899,
+      "distance_to_found_km": 130.40940781646336,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 56,
+      "start_lat": 42.943571428571424,
+      "start_lon": -87.67984042068322,
+      "end_lat": 42.91174155443991,
+      "end_lon": -87.71197930107725,
+      "distance_to_found_km": 130.4138202967021,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 118,
+      "start_lat": 42.995,
+      "start_lon": -87.64555470639752,
+      "end_lat": 42.96317012586848,
+      "end_lon": -87.67772047013574,
+      "distance_to_found_km": 130.48373481943608,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 25,
+      "start_lat": 42.91785714285714,
+      "start_lon": -87.69698327782608,
+      "end_lat": 42.88602726872562,
+      "end_lon": -87.72910874309298,
+      "distance_to_found_km": 130.49698252136318,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 149,
+      "start_lat": 43.02071428571428,
+      "start_lon": -87.62841184925466,
+      "end_lat": 42.98888441158276,
+      "end_lon": -87.66059108126522,
+      "distance_to_found_km": 130.63664866516874,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 180,
+      "start_lat": 43.046428571428564,
+      "start_lon": -87.6112689921118,
+      "end_lat": 43.014598697297046,
+      "end_lon": -87.64346171016513,
+      "distance_to_found_km": 130.86785565495248,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 71,
+      "start_lat": 42.95642857142857,
+      "start_lon": -87.67984042068322,
+      "end_lat": 42.92459869729705,
+      "end_lon": -87.71198601527189,
+      "distance_to_found_km": 131.02982431893122,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 102,
+      "start_lat": 42.982142857142854,
+      "start_lon": -87.66269756354038,
+      "end_lat": 42.95031298301134,
+      "end_lon": -87.69485659979769,
+      "distance_to_found_km": 131.0568780615468,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 40,
+      "start_lat": 42.93071428571428,
+      "start_lon": -87.69698327782608,
+      "end_lat": 42.89888441158276,
+      "end_lon": -87.72911544844735,
+      "distance_to_found_km": 131.08116075943002,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 133,
+      "start_lat": 43.007857142857134,
+      "start_lon": -87.64555470639752,
+      "end_lat": 42.976027268725616,
+      "end_lon": -87.67772720205234,
+      "distance_to_found_km": 131.16225532171126,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 9,
+      "start_lat": 42.904999999999994,
+      "start_lon": -87.71412613496894,
+      "end_lat": 42.87317012586848,
+      "end_lon": -87.74624489929646,
+      "distance_to_found_km": 131.2108135116448,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 164,
+      "start_lat": 43.03357142857142,
+      "start_lon": -87.62841184925466,
+      "end_lat": 43.0017415544399,
+      "end_lon": -87.66059782206356,
+      "distance_to_found_km": 131.34574943898937,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 195,
+      "start_lat": 43.05928571428571,
+      "start_lon": -87.6112689921118,
+      "end_lat": 43.02745584015419,
+      "end_lon": -87.64346845985911,
+      "distance_to_found_km": 131.60701554571273,
+      "drift_hours": 6.5
+    },
+    {
+      "scenario_id": 86,
+      "start_lat": 42.96928571428571,
+      "start_lon": -87.67984042068322,
+      "end_lat": 42.93745584015419,
+      "end_lon": -87.71199273389183,
+      "distance_to_found_km": 131.65846936367015,
+      "drift_hours": 6.5
+    }
+  ],
+  "forward_scenarios": [
+    {
+      "scenario_id": 1,
+      "description": "Estimated_5NM_Drop",
+      "start_lat": 42.995,
+      "start_lon": -87.7312689921118,
+      "end_lat": 42.96317012586848,
+      "end_lon": -87.76343475585001,
+      "distance_to_actual_km": 136.68089077639044,
+      "drift_hours": 6.5,
+      "parameters": {
+        "windage_factor": 0.025,
+        "current_factor": 1.0
+      }
+    },
+    {
+      "scenario_id": 2,
+      "description": "Low_Windage",
+      "start_lat": 42.995,
+      "start_lon": -87.7312689921118,
+      "end_lat": 42.96737422594403,
+      "end_lon": -87.75347907718931,
+      "distance_to_actual_km": 136.16821645793007,
+      "drift_hours": 6.5,
+      "parameters": {
+        "windage_factor": 0.02,
+        "current_factor": 1.0
+      }
+    },
+    {
+      "scenario_id": 3,
+      "description": "High_Windage",
+      "start_lat": 42.995,
+      "start_lon": -87.7312689921118,
+      "end_lat": 42.95896602579293,
+      "end_lon": -87.77339043451073,
+      "distance_to_actual_km": 137.1981664256679,
+      "drift_hours": 6.5,
+      "parameters": {
+        "windage_factor": 0.03,
+        "current_factor": 1.0
+      }
+    },
+    {
+      "scenario_id": 4,
+      "description": "Strong_Current",
+      "start_lat": 42.995,
+      "start_lon": -87.7312689921118,
+      "end_lat": 42.961008251117725,
+      "end_lon": -87.75991222993694,
+      "distance_to_actual_km": 136.31697391038938,
+      "drift_hours": 6.5,
+      "parameters": {
+        "windage_factor": 0.025,
+        "current_factor": 1.2
+      }
+    },
+    {
+      "scenario_id": 5,
+      "description": "Weak_Current",
+      "start_lat": 42.995,
+      "start_lon": -87.7312689921118,
+      "end_lat": 42.965332000619235,
+      "end_lon": -87.76695728176308,
+      "distance_to_actual_km": 137.0448498362648,
+      "drift_hours": 6.5,
+      "parameters": {
+        "windage_factor": 0.025,
+        "current_factor": 0.8
+      }
+    }
+  ],
+  "drop_zone_validation": {
+    "estimated_position": {
+      "lat": 42.995,
+      "lon": -87.7312689921118,
+      "description": "5 NM straight offshore from Milwaukee"
+    },
+    "boat_capability_ok": true,
+    "hindcast_consistency_ok": false,
+    "forward_prediction_ok": false,
+    "overall_valid": false,
+    "drop_zone_error_km": 13.983518961723822,
+    "forward_error_km": 136.68089077639044
+  }
+}

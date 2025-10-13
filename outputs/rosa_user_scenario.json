@@ -1,0 +1,68 @@
+{
+  "user_scenario": {
+    "release_lat": 42.995,
+    "release_lon": -87.845,
+    "release_time": "2025-08-22T20:00:00",
+    "user_calculated": true
+  },
+  "best_prediction": {
+    "name": "Conservative Fender",
+    "predicted_position": {
+      "lat": 43.33496180660948,
+      "lon": -89.3615610593485
+    },
+    "prediction_error_nm": 146.7532090395468,
+    "predicted_drift_nm": 69.47897410185548,
+    "specs": {
+      "windage": 0.02,
+      "leeway": 0.03,
+      "stokes_factor": 0.008
+    }
+  },
+  "all_scenarios": [
+    {
+      "name": "Conservative Fender",
+      "predicted_position": {
+        "lat": 43.33496180660948,
+        "lon": -89.3615610593485
+      },
+      "prediction_error_nm": 146.7532090395468,
+      "predicted_drift_nm": 69.47897410185548,
+      "specs": {
+        "windage": 0.02,
+        "leeway": 0.03,
+        "stokes_factor": 0.008
+      }
+    },
+    {
+      "name": "Moderate Fender",
+      "predicted_position": {
+        "lat": 43.51386418451028,
+        "lon": -90.49330962945496
+      },
+      "prediction_error_nm": 196.8199997836101,
+      "predicted_drift_nm": 119.91768393648667,
+      "specs": {
+        "windage": 0.035,
+        "leeway": 0.05,
+        "stokes_factor": 0.012
+      }
+    },
+    {
+      "name": "High-Drift Fender",
+      "predicted_position": {
+        "lat": 43.91015439576947,
+        "lon": -91.94007172259728
+      },
+      "prediction_error_nm": 263.9019984986374,
+      "predicted_drift_nm": 186.73001467860453,
+      "specs": {
+        "windage": 0.05,
+        "leeway": 0.08,
+        "stokes_factor": 0.018
+      }
+    }
+  ],
+  "accuracy_assessment": "NEEDS REFINEMENT",
+  "prediction_error_nm": 146.7532090395468
+}

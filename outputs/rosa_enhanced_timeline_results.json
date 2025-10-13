@@ -1,0 +1,1596 @@
+{
+  "analysis_timestamp": "2025-10-12T22:01:51.154376",
+  "enhanced_parameters": {
+    "typical_wind_speed_ms": 6.5,
+    "typical_wind_direction": 225,
+    "surface_current_speed_ms": 0.12,
+    "surface_current_direction": 140,
+    "windage_coefficient": 0.035,
+    "water_temperature_c": 22,
+    "thermocline_effect": 0.85,
+    "diurnal_wind_variation": 0.15
+  },
+  "timeline_analysis": {},
+  "boat_capability_analysis": {
+    "departure_time": "2025-08-22 15:00:00 CST",
+    "estimated_drop_time": "2025-08-22 17:30:00 CST",
+    "available_time_hours": 2.5,
+    "distance_to_drop_nm": 4.994426744547817,
+    "required_speed_kts": 1.9977706978191268,
+    "vessel_capability_kts": 8,
+    "feasible": true,
+    "comfortable_feasible": true,
+    "speed_margin_kts": 6.002229302180873
+  },
+  "enhanced_hindcast_scenarios": [
+    {
+      "scenario_id": 1220,
+      "start_lat": 42.86,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.80521930779679,
+      "end_lon": -87.56491639032073,
+      "distance_to_found_km": 114.65421918453899,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 820,
+      "start_lat": 42.86,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.82130569848762,
+      "end_lon": -87.56042401813869,
+      "distance_to_found_km": 115.01488857826926,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2420,
+      "start_lat": 42.86,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.820870934140565,
+      "end_lon": -87.56101713368962,
+      "distance_to_found_km": 115.04008249385554,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 1240,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.81942983411258,
+      "end_lon": -87.56491953244496,
+      "distance_to_found_km": 115.26894490760978,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 20,
+      "start_lat": 42.86,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.81217564719936,
+      "end_lon": -87.57287944470808,
+      "distance_to_found_km": 115.55146621297041,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 840,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.83551622480341,
+      "end_lon": -87.56042612595651,
+      "distance_to_found_km": 115.65213521881003,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2440,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.83508146045636,
+      "end_lon": -87.56101937806406,
+      "distance_to_found_km": 115.67653015177028,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 1260,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.83364036042837,
+      "end_lon": -87.56492267685648,
+      "distance_to_found_km": 115.90195241269224,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2020,
+      "start_lat": 42.86,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.80348036025815,
+      "end_lon": -87.58474175572654,
+      "distance_to_found_km": 116.07701827040027,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1219,
+      "start_lat": 42.86,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.80521930779679,
+      "end_lon": -87.58386375874178,
+      "distance_to_found_km": 116.08363659794152,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 420,
+      "start_lat": 42.86,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.803045595911094,
+      "end_lon": -87.58533487127747,
+      "distance_to_found_km": 116.10366442323775,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 40,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.826386173515154,
+      "end_lon": -87.57288442021517,
+      "distance_to_found_km": 116.17196679115999,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 860,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.8497267511192,
+      "end_lon": -87.56042823530869,
+      "distance_to_found_km": 116.3073574396732,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2460,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.849291986772144,
+      "end_lon": -87.56102162407228,
+      "distance_to_found_km": 116.33095849286875,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 819,
+      "start_lat": 42.86,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.82130569848762,
+      "end_lon": -87.57937138655974,
+      "distance_to_found_km": 116.43461616283751,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1620,
+      "start_lat": 42.86,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.819131986601924,
+      "end_lon": -87.58084249909543,
+      "distance_to_found_km": 116.45045075225697,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Weak_Current",
+        "wind_factor": 1.0,
+        "current_factor": 0.6,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2419,
+      "start_lat": 42.86,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.820870934140565,
+      "end_lon": -87.57996450211067,
+      "distance_to_found_km": 116.4601589832392,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 1280,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.84785088674416,
+      "end_lon": -87.56492582355725,
+      "distance_to_found_km": 116.55294383110572,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2040,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.81769088657394,
+      "end_lon": -87.5847494623663,
+      "distance_to_found_km": 116.68163793325803,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1239,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.81942983411258,
+      "end_lon": -87.58386690086601,
+      "distance_to_found_km": 116.69051197045378,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 440,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.81725612222689,
+      "end_lon": -87.58534271447385,
+      "distance_to_found_km": 116.70749188301698,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 60,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.84059669983094,
+      "end_lon": -87.57288939934416,
+      "distance_to_found_km": 116.81054586428415,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 19,
+      "start_lat": 42.86,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.81217564719936,
+      "end_lon": -87.59182681312913,
+      "distance_to_found_km": 116.97839932785664,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 880,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.86393727743499,
+      "end_lon": -87.56043034619657,
+      "distance_to_found_km": 116.98025319027788,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2480,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.86350251308794,
+      "end_lon": -87.56102387171569,
+      "distance_to_found_km": 117.00306580573488,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 839,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.83551622480341,
+      "end_lon": -87.57937349437756,
+      "distance_to_found_km": 117.0638151829057,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1640,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.83334251291772,
+      "end_lon": -87.5808493079854,
+      "distance_to_found_km": 117.07662887574371,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Weak_Current",
+        "wind_factor": 1.0,
+        "current_factor": 0.6,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2439,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.83508146045636,
+      "end_lon": -87.57996674648511,
+      "distance_to_found_km": 117.08856851506604,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 1300,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.86206141305995,
+      "end_lon": -87.56492897254923,
+      "distance_to_found_km": 117.22161954171187,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2060,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.83190141288973,
+      "end_lon": -87.58475717461604,
+      "distance_to_found_km": 117.3044258708778,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1259,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.83364036042837,
+      "end_lon": -87.58387004527754,
+      "distance_to_found_km": 117.31553050775346,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 460,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.83146664854267,
+      "end_lon": -87.58535056337963,
+      "distance_to_found_km": 117.32949189728238,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 80,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.85480722614673,
+      "end_lon": -87.57289438209814,
+      "distance_to_found_km": 117.46690859524632,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2019,
+      "start_lat": 42.86,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.80348036025815,
+      "end_lon": -87.60368912414759,
+      "distance_to_found_km": 117.51057860378057,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1218,
+      "start_lat": 42.86,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.80521930779679,
+      "end_lon": -87.60281112716284,
+      "distance_to_found_km": 117.51612812076326,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 419,
+      "start_lat": 42.86,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.803045595911094,
+      "end_lon": -87.60428223969852,
+      "distance_to_found_km": 117.53755014889703,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 39,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.826386173515154,
+      "end_lon": -87.59183178863623,
+      "distance_to_found_km": 117.59105256551487,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 900,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.87814780375078,
+      "end_lon": -87.56043245862145,
+      "distance_to_found_km": 117.67051927417404,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2500,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.87771303940372,
+      "end_lon": -87.56102612099568,
+      "distance_to_found_km": 117.69254921262932,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 859,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.8497267511192,
+      "end_lon": -87.57937560372974,
+      "distance_to_found_km": 117.71086196217355,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1660,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.8475530392335,
+      "end_lon": -87.58085612183184,
+      "distance_to_found_km": 117.72068558055184,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Weak_Current",
+        "wind_factor": 1.0,
+        "current_factor": 0.6,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2459,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.849291986772144,
+      "end_lon": -87.57996899249333,
+      "distance_to_found_km": 117.73483060738916,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 818,
+      "start_lat": 42.86,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.82130569848762,
+      "end_lon": -87.5983187549808,
+      "distance_to_found_km": 117.85763792519768,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1619,
+      "start_lat": 42.86,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.819131986601924,
+      "end_lon": -87.59978986751648,
+      "distance_to_found_km": 117.87491438973956,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Weak_Current",
+        "wind_factor": 1.0,
+        "current_factor": 0.6,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2418,
+      "start_lat": 42.86,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.820870934140565,
+      "end_lon": -87.59891187053172,
+      "distance_to_found_km": 117.88352066263265,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 1320,
+      "start_lat": 42.93105263157895,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.87627193937574,
+      "end_lon": -87.56493212383441,
+      "distance_to_found_km": 117.90767867246335,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2080,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.84611193920552,
+      "end_lon": -87.58476489248059,
+      "distance_to_found_km": 117.9450942806559,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1279,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.84785088674416,
+      "end_lon": -87.5838731919783,
+      "distance_to_found_km": 117.95840380816176,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 480,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.845677174858466,
+      "end_lon": -87.58535841799971,
+      "distance_to_found_km": 117.96937701901474,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2039,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.81769088657394,
+      "end_lon": -87.60369683078736,
+      "distance_to_found_km": 118.10754322071058,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1238,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.81942983411258,
+      "end_lon": -87.60281426928707,
+      "distance_to_found_km": 118.11532237310631,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 439,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.81725612222689,
+      "end_lon": -87.6042900828949,
+      "distance_to_found_km": 118.13373221188621,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 100,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.86901775246252,
+      "end_lon": -87.57289936848022,
+      "distance_to_found_km": 118.14075857874698,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 59,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.84059669983094,
+      "end_lon": -87.59183676776522,
+      "distance_to_found_km": 118.22165028916773,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 879,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.86393727743499,
+      "end_lon": -87.57937771461762,
+      "distance_to_found_km": 118.3754638305096,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 920,
+      "start_lat": 42.93105263157895,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.89235833006657,
+      "end_lon": -87.56043457258467,
+      "distance_to_found_km": 118.37785183038443,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1680,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.861763565549296,
+      "end_lon": -87.58086294063904,
+      "distance_to_found_km": 118.38232906284776,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Weak_Current",
+        "wind_factor": 1.0,
+        "current_factor": 0.6,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2479,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.86350251308794,
+      "end_lon": -87.57997124013674,
+      "distance_to_found_km": 118.39865292363288,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 2520,
+      "start_lat": 42.93105263157895,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.891923565719516,
+      "end_lon": -87.56102837191366,
+      "distance_to_found_km": 118.39910515095742,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 18,
+      "start_lat": 42.86,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.81217564719936,
+      "end_lon": -87.61077418155018,
+      "distance_to_found_km": 118.40844100755406,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 838,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.83551622480341,
+      "end_lon": -87.59832086279862,
+      "distance_to_found_km": 118.47895972417506,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1639,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.83334251291772,
+      "end_lon": -87.59979667640646,
+      "distance_to_found_km": 118.4932495793636,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Weak_Current",
+        "wind_factor": 1.0,
+        "current_factor": 0.6,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2438,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.83508146045636,
+      "end_lon": -87.59891411490617,
+      "distance_to_found_km": 118.50406232154401,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 2100,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.86032246552131,
+      "end_lon": -87.58477261596478,
+      "distance_to_found_km": 118.6033534041853,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1340,
+      "start_lat": 42.945263157894736,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.89048246569153,
+      "end_lon": -87.56493527741475,
+      "distance_to_found_km": 118.61081958041117,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1299,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.86206141305995,
+      "end_lon": -87.58387634097028,
+      "distance_to_found_km": 118.61884157201706,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 500,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.85988770117425,
+      "end_lon": -87.58536627833901,
+      "distance_to_found_km": 118.62685782640051,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2059,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.83190141288973,
+      "end_lon": -87.6037045430371,
+      "distance_to_found_km": 118.72253649599325,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1258,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.83364036042837,
+      "end_lon": -87.60281741369859,
+      "distance_to_found_km": 118.73252120956208,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 459,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.83146664854267,
+      "end_lon": -87.60429793180069,
+      "distance_to_found_km": 118.74794693995206,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 120,
+      "start_lat": 42.93105263157895,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.88322827877831,
+      "end_lon": -87.57290435849356,
+      "distance_to_found_km": 118.8317983244639,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 79,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.85480722614673,
+      "end_lon": -87.5918417505192,
+      "distance_to_found_km": 118.86990691589274,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2018,
+      "start_lat": 42.86,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.80348036025815,
+      "end_lon": -87.62263649256865,
+      "distance_to_found_km": 118.94707683693245,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1217,
+      "start_lat": 42.86,
+      "start_lon": -87.60811109737496,
+      "end_lat": 42.80521930779679,
+      "end_lon": -87.62175849558389,
+      "distance_to_found_km": 118.95158262134623,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 418,
+      "start_lat": 42.86,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.803045595911094,
+      "end_lon": -87.62322960811957,
+      "distance_to_found_km": 118.97436539733637,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 38,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.826386173515154,
+      "end_lon": -87.61077915705728,
+      "distance_to_found_km": 119.01341413367938,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 899,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.87814780375078,
+      "end_lon": -87.5793798270425,
+      "distance_to_found_km": 119.0573268001921,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1700,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.87597409186508,
+      "end_lon": -87.58086976441123,
+      "distance_to_found_km": 119.0612661249499,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Weak_Current",
+        "wind_factor": 1.0,
+        "current_factor": 0.6,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2499,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.87771303940372,
+      "end_lon": -87.57997348941673,
+      "distance_to_found_km": 119.07974179031093,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 940,
+      "start_lat": 42.945263157894736,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.90656885638236,
+      "end_lon": -87.56043668808753,
+      "distance_to_found_km": 119.10194679193314,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 858,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.8497267511192,
+      "end_lon": -87.5983229721508,
+      "distance_to_found_km": 119.11800106712906,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2540,
+      "start_lat": 42.945263157894736,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.9061340920353,
+      "end_lon": -87.56103062447106,
+      "distance_to_found_km": 119.12242983200603,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 1659,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.8475530392335,
+      "end_lon": -87.5998034902529,
+      "distance_to_found_km": 119.12933380235715,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Weak_Current",
+        "wind_factor": 1.0,
+        "current_factor": 0.6,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2458,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.849291986772144,
+      "end_lon": -87.59891636091439,
+      "distance_to_found_km": 119.14232803970164,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 2120,
+      "start_lat": 42.93105263157895,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.8745329918371,
+      "end_lon": -87.58478034507345,
+      "distance_to_found_km": 119.27891201060233,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 817,
+      "start_lat": 42.86,
+      "start_lon": -87.60811109737496,
+      "end_lat": 42.82130569848762,
+      "end_lon": -87.61726612340185,
+      "distance_to_found_km": 119.28383589957063,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Wind",
+        "wind_factor": 0.7,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1319,
+      "start_lat": 42.93105263157895,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.87627193937574,
+      "end_lon": -87.58387949225546,
+      "distance_to_found_km": 119.29655208374396,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 520,
+      "start_lat": 42.93105263157895,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.874098227490045,
+      "end_lon": -87.58537414440245,
+      "distance_to_found_km": 119.30164340614597,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1618,
+      "start_lat": 42.86,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.819131986601924,
+      "end_lon": -87.61873723593753,
+      "distance_to_found_km": 119.30252002770051,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Weak_Current",
+        "wind_factor": 1.0,
+        "current_factor": 0.6,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2417,
+      "start_lat": 42.86,
+      "start_lon": -87.60811109737496,
+      "end_lat": 42.820870934140565,
+      "end_lon": -87.61785923895278,
+      "distance_to_found_km": 119.3100498856589,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Low_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.025
+      }
+    },
+    {
+      "scenario_id": 1360,
+      "start_lat": 42.95947368421053,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.90469299200732,
+      "end_lon": -87.56493843329224,
+      "distance_to_found_km": 119.33074030946901,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2079,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.84611193920552,
+      "end_lon": -87.60371226090164,
+      "distance_to_found_km": 119.35527974508503,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 1278,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.84785088674416,
+      "end_lon": -87.60282056039935,
+      "distance_to_found_km": 119.36744534806729,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 479,
+      "start_lat": 42.90263157894737,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.845677174858466,
+      "end_lon": -87.60430578642077,
+      "distance_to_found_km": 119.37991599694352,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 99,
+      "start_lat": 42.91684210526316,
+      "start_lon": -87.57021636053285,
+      "end_lat": 42.86901775246252,
+      "end_lon": -87.59184673690127,
+      "distance_to_found_km": 119.53553514650557,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 2038,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.81769088657394,
+      "end_lon": -87.62264419920841,
+      "distance_to_found_km": 119.53655043274432,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Windage",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.045
+      }
+    },
+    {
+      "scenario_id": 140,
+      "start_lat": 42.945263157894736,
+      "start_lon": -87.5512689921118,
+      "end_lat": 42.8974388050941,
+      "end_lon": -87.57290935214125,
+      "distance_to_found_km": 119.53972971910223,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 1237,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.60811109737496,
+      "end_lat": 42.81942983411258,
+      "end_lon": -87.62176163770812,
+      "distance_to_found_km": 119.54326007546389,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 438,
+      "start_lat": 42.87421052631579,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.81725612222689,
+      "end_lon": -87.62323745131596,
+      "distance_to_found_km": 119.56306592368315,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "High_Wind",
+        "wind_factor": 1.3,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    },
+    {
+      "scenario_id": 58,
+      "start_lat": 42.88842105263158,
+      "start_lon": -87.5891637289539,
+      "end_lat": 42.84059669983094,
+      "end_lon": -87.61078413618627,
+      "distance_to_found_km": 119.63619766435986,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Base_August",
+        "wind_factor": 1.0,
+        "current_factor": 1.0,
+        "windage": 0.035
+      }
+    }
+  ],
+  "enhanced_forward_scenarios": [
+    {
+      "scenario_id": 1,
+      "start_lat": 42.995,
+      "start_lon": -87.7312689921118,
+      "end_lat": 42.94021930779679,
+      "end_lon": -87.74494633304899,
+      "distance_to_found_km": 134.20208033543656,
+      "drift_hours": 6.5,
+      "parameter_set": {
+        "name": "Strong_Current",
+        "wind_factor": 1.0,
+        "current_factor": 1.4,
+        "windage": 0.035
+      }
+    }
+  ],
+  "parameter_sensitivity": {
+    "Strong_Current": {
+      "count": 11,
+      "avg_accuracy": 116.64286995956326,
+      "best_accuracy": 114.65421918453899
+    },
+    "Low_Wind": {
+      "count": 9,
+      "avg_accuracy": 116.7435649927021,
+      "best_accuracy": 115.01488857826926
+    },
+    "Low_Windage": {
+      "count": 9,
+      "avg_accuracy": 116.76780721390953,
+      "best_accuracy": 115.04008249385554
+    },
+    "Base_August": {
+      "count": 6,
+      "avg_accuracy": 116.76172322617208,
+      "best_accuracy": 115.55146621297041
+    },
+    "High_Windage": {
+      "count": 6,
+      "avg_accuracy": 117.27104969661384,
+      "best_accuracy": 116.07701827040027
+    },
+    "High_Wind": {
+      "count": 5,
+      "avg_accuracy": 117.12951507428977,
+      "best_accuracy": 116.10366442323775
+    },
+    "Weak_Current": {
+      "count": 4,
+      "avg_accuracy": 117.28066989957303,
+      "best_accuracy": 116.45045075225697
+    }
+  },
+  "drop_zone_validation": {
+    "estimated_position": {
+      "lat": 42.995,
+      "lon": -87.7312689921118,
+      "description": "5 NM straight offshore from Milwaukee"
+    },
+    "boat_capability_ok": true,
+    "comfortable_cruising_ok": true,
+    "hindcast_consistency_ok": false,
+    "forward_prediction_ok": false,
+    "overall_valid": false,
+    "high_confidence": false,
+    "drop_zone_error_km": 20.979012642863633,
+    "forward_error_km": 134.20208033543656
+  }
+}

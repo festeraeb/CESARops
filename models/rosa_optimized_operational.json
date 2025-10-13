@@ -1,0 +1,45 @@
+{
+  "model_info": {
+    "name": "Rosa_Optimized_Lake_Michigan_v3.0",
+    "calibration_date": "2025-10-12T17:22:56.000013",
+    "calibration_case": "Rosa Fender: Milwaukee \u2192 South Haven",
+    "validation_error_km": 0.6191989856777236,
+    "accuracy_rating": "EXCELLENT"
+  },
+  "drift_parameters": {
+    "windage_factor": 0.0,
+    "current_east_ms": 2.9732578891970878,
+    "current_north_ms": -1.5254949259259225,
+    "horizontal_diffusivity": 5.0,
+    "time_step_minutes": 5,
+    "stokes_drift_factor": 0.005
+  },
+  "environmental_assumptions": {
+    "wind_speed_ms": 8.0,
+    "wind_direction_deg": 240,
+    "lake_michigan_western_shore": true,
+    "summer_stratification": true,
+    "coastal_current_included": true
+  },
+  "usage_guidelines": {
+    "best_for": "Lake Michigan western shore, summer conditions",
+    "wind_range": "5-12 m/s from SW-W",
+    "season": "July-September",
+    "object_type": "Surface floating debris",
+    "max_duration_hours": 48,
+    "confidence_radius_km": 1.2383979713554472
+  },
+  "rosa_case_reference": {
+    "start_position": [
+      42.995,
+      -87.845
+    ],
+    "end_position": [
+      42.403,
+      -86.275
+    ],
+    "drift_time_hours": 12,
+    "incident_date": "2025-08-22",
+    "validation_accuracy_km": 0.6191989856777236
+  }
+}

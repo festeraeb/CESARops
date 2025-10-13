@@ -1,0 +1,42 @@
+{
+  "model_name": "Rosa_Calibrated_Lake_Michigan_v2.1",
+  "calibration_date": "2025-10-12T17:21:52.370987",
+  "calibration_case": "Rosa Fender - Milwaukee to South Haven",
+  "validation_error_km": 152.77525358606897,
+  "accuracy_rating": "POOR",
+  "drift_parameters": {
+    "windage_factor": 0.05,
+    "current_factor": 1.0,
+    "stokes_drift": 0.01,
+    "horizontal_diffusivity": 10.0,
+    "time_step_minutes": 10,
+    "vertical_mixing": false
+  },
+  "reference_conditions": {
+    "wind_speed_range": [
+      3,
+      12
+    ],
+    "wind_direction_range": [
+      180,
+      270
+    ],
+    "current_speed_typical": 0.05,
+    "current_direction_typical": 180,
+    "wave_height_range": [
+      0.5,
+      3.0
+    ],
+    "water_temp_range": [
+      18,
+      24
+    ]
+  },
+  "lake_specific": {
+    "thermal_stratification": true,
+    "coastal_upwelling_factor": 1.2,
+    "cross_shore_transport": 0.02,
+    "wind_setup_factor": 1.1,
+    "bottom_friction": 0.001
+  }
+}

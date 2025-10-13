@@ -1,0 +1,20 @@
+# High-Performance Drift Analysis System
+# Using Rust for computational kernels with Python bindings
+
+# Cargo.toml for Rust components
+[package]
+name = "cesarops_core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.19", features = ["extension-module"] }
+numpy = "0.19"
+rayon = "1.7"
+nalgebra = "0.32"
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+rand = "0.8"

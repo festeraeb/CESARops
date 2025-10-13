@@ -1,0 +1,162 @@
+{
+  "case_summary": {
+    "vessel": "Rosa",
+    "victim": "Charlie Brown",
+    "object": "8-10 inch orange teardrop fender with 3ft tagline",
+    "recovery_location": "42.4000\u00b0N, -86.2800\u00b0W",
+    "recovery_time": "2025-08-28T16:00:00",
+    "analysis_date": "2025-10-10T02:09:46.399580"
+  },
+  "best_scenario": {
+    "scenario_name": "Milwaukee_3nm_2100",
+    "release_location": "Milwaukee_3nm",
+    "release_coordinates": "43.0389\u00b0N, -87.8389\u00b0W",
+    "release_time": "2025-08-22T21:00:00",
+    "predicted_recovery": "44.1862\u00b0N, -91.7339\u00b0W",
+    "distance_error_nm": 261.29,
+    "predicted_drift_nm": 182.77,
+    "actual_drift_nm": 78.74,
+    "bearing_error_deg": 174.9,
+    "accuracy_rating": "Poor",
+    "total_score": 278.77
+  },
+  "search_recommendations": {
+    "primary_search_area": "Within 261 nm of predicted position",
+    "confidence_level": "Moderate",
+    "search_priority": "Focus on areas southeast of Milwaukee, accounting for predominant SW winds"
+  },
+  "all_scenarios": [
+    {
+      "name": "Milwaukee_3nm_2100",
+      "release_time_str": "2025-08-22 21:00 CDT",
+      "release_time_hhmm": "21:00",
+      "location": "Milwaukee_3nm",
+      "error_nm": 261.29,
+      "drift_nm": 182.8,
+      "bearing_error": 174.9,
+      "rating": "Poor",
+      "score": 278.77
+    },
+    {
+      "name": "Milwaukee_2.5nm_2100",
+      "release_time_str": "2025-08-22 21:00 CDT",
+      "release_time_hhmm": "21:00",
+      "location": "Milwaukee_2.5nm",
+      "error_nm": 261.97,
+      "drift_nm": 182.8,
+      "bearing_error": 175.1,
+      "rating": "Poor",
+      "score": 279.48
+    },
+    {
+      "name": "Milwaukee_2nm_2100",
+      "release_time_str": "2025-08-22 21:00 CDT",
+      "release_time_hhmm": "21:00",
+      "location": "Milwaukee_2nm",
+      "error_nm": 262.65,
+      "drift_nm": 182.8,
+      "bearing_error": 175.4,
+      "rating": "Poor",
+      "score": 280.18
+    },
+    {
+      "name": "Milwaukee_3nm_1900",
+      "release_time_str": "2025-08-22 19:00 CDT",
+      "release_time_hhmm": "19:00",
+      "location": "Milwaukee_3nm",
+      "error_nm": 263.29,
+      "drift_nm": 184.8,
+      "bearing_error": 174.6,
+      "rating": "Poor",
+      "score": 280.75
+    },
+    {
+      "name": "Milwaukee_2.5nm_1900",
+      "release_time_str": "2025-08-22 19:00 CDT",
+      "release_time_hhmm": "19:00",
+      "location": "Milwaukee_2.5nm",
+      "error_nm": 263.96,
+      "drift_nm": 184.8,
+      "bearing_error": 174.9,
+      "rating": "Poor",
+      "score": 281.45
+    },
+    {
+      "name": "Milwaukee_2nm_1900",
+      "release_time_str": "2025-08-22 19:00 CDT",
+      "release_time_hhmm": "19:00",
+      "location": "Milwaukee_2nm",
+      "error_nm": 264.64,
+      "drift_nm": 184.8,
+      "bearing_error": 175.2,
+      "rating": "Poor",
+      "score": 282.16
+    },
+    {
+      "name": "Milwaukee_3nm_2300",
+      "release_time_str": "2025-08-22 23:00 CDT",
+      "release_time_hhmm": "23:00",
+      "location": "Milwaukee_3nm",
+      "error_nm": 259.21,
+      "drift_nm": 180.7,
+      "bearing_error": 175.0,
+      "rating": "Poor",
+      "score": 282.7
+    },
+    {
+      "name": "Milwaukee_2.5nm_2300",
+      "release_time_str": "2025-08-22 23:00 CDT",
+      "release_time_hhmm": "23:00",
+      "location": "Milwaukee_2.5nm",
+      "error_nm": 259.89,
+      "drift_nm": 180.7,
+      "bearing_error": 175.3,
+      "rating": "Poor",
+      "score": 283.42
+    },
+    {
+      "name": "Milwaukee_2nm_2300",
+      "release_time_str": "2025-08-22 23:00 CDT",
+      "release_time_hhmm": "23:00",
+      "location": "Milwaukee_2nm",
+      "error_nm": 260.57,
+      "drift_nm": 180.7,
+      "bearing_error": 175.5,
+      "rating": "Poor",
+      "score": 284.12
+    },
+    {
+      "name": "Milwaukee_3nm_1700",
+      "release_time_str": "2025-08-22 17:00 CDT",
+      "release_time_hhmm": "17:00",
+      "location": "Milwaukee_3nm",
+      "error_nm": 266.02,
+      "drift_nm": 187.5,
+      "bearing_error": 174.4,
+      "rating": "Poor",
+      "score": 289.46
+    },
+    {
+      "name": "Milwaukee_2.5nm_1700",
+      "release_time_str": "2025-08-22 17:00 CDT",
+      "release_time_hhmm": "17:00",
+      "location": "Milwaukee_2.5nm",
+      "error_nm": 266.7,
+      "drift_nm": 187.5,
+      "bearing_error": 174.7,
+      "rating": "Poor",
+      "score": 290.17
+    },
+    {
+      "name": "Milwaukee_2nm_1700",
+      "release_time_str": "2025-08-22 17:00 CDT",
+      "release_time_hhmm": "17:00",
+      "location": "Milwaukee_2nm",
+      "error_nm": 267.39,
+      "drift_nm": 187.6,
+      "bearing_error": 175.0,
+      "rating": "Poor",
+      "score": 290.89
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+CESAROPS ML Training Report
+==============================
+
+Training Date: 2025-10-12T16:58:36.271638
+Models Trained: simple_regression, random_forest
+
+SIMPLE_REGRESSION Model Results:
+--------------------
+  mse_lat: 0.000113
+  mse_lon: 0.000094
+  mse_total: 0.000207
+  r2_score: 0.999987
+  training_samples: 472
+
+RANDOM_FOREST Model Results:
+--------------------
+  mse_lat: 0.000119
+  mse_lon: 0.000102
+  mse_total: 0.000221
+  r2_lat: 0.999957
+  r2_lon: 0.999992
+  r2_avg: 0.999974
+  training_samples: 472
+

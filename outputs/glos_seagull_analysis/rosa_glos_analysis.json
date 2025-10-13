@@ -1,0 +1,163 @@
+{
+  "analysis_type": "glos_seagull_real_data",
+  "case_info": {
+    "release_position": {
+      "lat": 42.995,
+      "lon": -87.845
+    },
+    "release_time": "2025-08-22 20:00:00",
+    "recovery_position": {
+      "lat": 42.4,
+      "lon": -86.28
+    },
+    "recovery_time": "2025-08-28 16:00:00"
+  },
+  "user_parameters": {
+    "windage": 0.06,
+    "leeway": 0.06,
+    "stokes_factor": 0.0045
+  },
+  "data_sources": {
+    "buoys_accessed": [
+      "obs_37",
+      "obs_2"
+    ],
+    "total_buoys": 2,
+    "data_quality": "real_glos_seagull"
+  },
+  "user_result": {
+    "parameters": {
+      "windage": 0.06,
+      "leeway": 0.06,
+      "stokes_factor": 0.0045
+    },
+    "predicted_position": {
+      "lat": 42.70178272591538,
+      "lon": -86.64654964008098
+    },
+    "prediction_error_nm": 24.31362105765032,
+    "actual_drift_nm": 77.74897889523581,
+    "predicted_drift_nm": 55.61396653770868,
+    "drift_error_nm": 22.13501235752713
+  },
+  "parameter_variations": [
+    {
+      "name": "User_Exact",
+      "parameters": {
+        "windage": 0.06,
+        "leeway": 0.06,
+        "stokes_factor": 0.0045
+      },
+      "prediction_error_nm": 24.308458626723638,
+      "predicted_position": {
+        "lat": 42.70177190587374,
+        "lon": -86.64639096871679
+      }
+    },
+    {
+      "name": "Lower_Wind",
+      "parameters": {
+        "windage": 0.05,
+        "leeway": 0.05,
+        "stokes_factor": 0.0045
+      },
+      "prediction_error_nm": 32.077495452183165,
+      "predicted_position": {
+        "lat": 42.76251231138903,
+        "lon": -86.81300449735761
+      }
+    },
+    {
+      "name": "Higher_Wind",
+      "parameters": {
+        "windage": 0.07,
+        "leeway": 0.07,
+        "stokes_factor": 0.0045
+      },
+      "prediction_error_nm": 16.964149854753767,
+      "predicted_position": {
+        "lat": 42.64108036316063,
+        "lon": -86.4799233537794
+      }
+    },
+    {
+      "name": "Lower_Stokes",
+      "parameters": {
+        "windage": 0.06,
+        "leeway": 0.06,
+        "stokes_factor": 0.003
+      },
+      "prediction_error_nm": 24.521355471404572,
+      "predicted_position": {
+        "lat": 42.69903420010557,
+        "lon": -86.6575988724596
+      }
+    },
+    {
+      "name": "Higher_Stokes",
+      "parameters": {
+        "windage": 0.06,
+        "leeway": 0.06,
+        "stokes_factor": 0.006
+      },
+      "prediction_error_nm": 24.119376118131065,
+      "predicted_position": {
+        "lat": 42.704714134604146,
+        "lon": -86.6353582928691
+      }
+    },
+    {
+      "name": "Zero_Stokes",
+      "parameters": {
+        "windage": 0.06,
+        "leeway": 0.06,
+        "stokes_factor": 0.0
+      },
+      "prediction_error_nm": 24.95385719616987,
+      "predicted_position": {
+        "lat": 42.69336680776848,
+        "lon": -86.67961253617574
+      }
+    },
+    {
+      "name": "Conservative",
+      "parameters": {
+        "windage": 0.05,
+        "leeway": 0.05,
+        "stokes_factor": 0.002
+      },
+      "prediction_error_nm": 32.499262293668345,
+      "predicted_position": {
+        "lat": 42.7579366885966,
+        "lon": -86.83144149740355
+      }
+    },
+    {
+      "name": "Aggressive",
+      "parameters": {
+        "windage": 0.07,
+        "leeway": 0.07,
+        "stokes_factor": 0.006
+      },
+      "prediction_error_nm": 16.865214731423503,
+      "predicted_position": {
+        "lat": 42.643915955077254,
+        "lon": -86.46902416974054
+      }
+    }
+  ],
+  "best_variation": {
+    "name": "Aggressive",
+    "parameters": {
+      "windage": 0.07,
+      "leeway": 0.07,
+      "stokes_factor": 0.006
+    },
+    "prediction_error_nm": 16.865214731423503,
+    "predicted_position": {
+      "lat": 42.643915955077254,
+      "lon": -86.46902416974054
+    }
+  },
+  "analysis_timestamp": "2025-10-10T22:11:37.792207"
+}

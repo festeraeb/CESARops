@@ -1,0 +1,343 @@
+{
+  "chart_info": {
+    "title": "Rosa Case Analysis - Nautical Overlay",
+    "scale": "1:80000",
+    "datum": "WGS84",
+    "projection": "Web Mercator",
+    "update": "2025-10-12T22:08:28.484578"
+  },
+  "navigation_features": {
+    "rosa_case": {
+      "departure": {
+        "lat": 42.995,
+        "lon": -87.845,
+        "name": "Milwaukee Departure"
+      },
+      "estimated_drop": {
+        "lat": 42.995,
+        "lon": -87.7313,
+        "name": "5 NM Offshore (Estimated)"
+      },
+      "best_drop": {
+        "lat": 42.86,
+        "lon": -87.5513,
+        "name": "Best Hindcast Drop"
+      },
+      "found": {
+        "lat": 42.403,
+        "lon": -86.275,
+        "name": "Found at South Haven"
+      },
+      "timeline": {
+        "departure_time": "2025-08-22 15:00:00 CST",
+        "drop_time": "2025-08-22 17:30:00 CST",
+        "found_time": "2025-08-23 00:00:00 CST",
+        "drift_duration": 6.5
+      }
+    },
+    "nav_aids": [
+      {
+        "name": "Milwaukee Breakwater Light",
+        "type": "Light",
+        "lat": 43.0228,
+        "lon": -87.8964,
+        "characteristics": "Fl W 2.5s 61ft",
+        "description": "White light flashing every 2.5 seconds"
+      },
+      {
+        "name": "Milwaukee Harbor Entrance",
+        "type": "Range Lights",
+        "lat": 43.0156,
+        "lon": -87.8889,
+        "characteristics": "F R Front, Oc R 4s Rear",
+        "description": "Red range lights for harbor entrance"
+      },
+      {
+        "name": "Racine Reef Light",
+        "type": "Light Station",
+        "lat": 42.7614,
+        "lon": -87.7844,
+        "characteristics": "Fl W 6s 85ft",
+        "description": "Major light station mid-lake"
+      },
+      {
+        "name": "South Haven Pier Lights",
+        "type": "Pier Lights",
+        "lat": 42.4031,
+        "lon": -86.2947,
+        "characteristics": "F R South, F G North",
+        "description": "Harbor entrance pier lights"
+      },
+      {
+        "name": "South Haven Light",
+        "type": "Lighthouse",
+        "lat": 42.4053,
+        "lon": -86.2928,
+        "characteristics": "Fl W 5s 35ft",
+        "description": "Historic South Haven lighthouse"
+      }
+    ],
+    "depths": {
+      "30ft": [
+        {
+          "lat": 42.995,
+          "lon": -87.82
+        },
+        {
+          "lat": 42.95,
+          "lon": -87.75
+        },
+        {
+          "lat": 42.9,
+          "lon": -87.68
+        },
+        {
+          "lat": 42.85,
+          "lon": -87.6
+        },
+        {
+          "lat": 42.8,
+          "lon": -87.5
+        },
+        {
+          "lat": 42.75,
+          "lon": -87.4
+        },
+        {
+          "lat": 42.7,
+          "lon": -87.3
+        },
+        {
+          "lat": 42.65,
+          "lon": -87.2
+        },
+        {
+          "lat": 42.6,
+          "lon": -87.1
+        },
+        {
+          "lat": 42.55,
+          "lon": -87.0
+        },
+        {
+          "lat": 42.5,
+          "lon": -86.9
+        },
+        {
+          "lat": 42.45,
+          "lon": -86.8
+        },
+        {
+          "lat": 42.42,
+          "lon": -86.35
+        }
+      ],
+      "60ft": [
+        {
+          "lat": 42.995,
+          "lon": -87.8
+        },
+        {
+          "lat": 42.94,
+          "lon": -87.72
+        },
+        {
+          "lat": 42.88,
+          "lon": -87.63
+        },
+        {
+          "lat": 42.82,
+          "lon": -87.53
+        },
+        {
+          "lat": 42.76,
+          "lon": -87.42
+        },
+        {
+          "lat": 42.7,
+          "lon": -87.3
+        },
+        {
+          "lat": 42.64,
+          "lon": -87.18
+        },
+        {
+          "lat": 42.58,
+          "lon": -87.05
+        },
+        {
+          "lat": 42.52,
+          "lon": -86.92
+        },
+        {
+          "lat": 42.46,
+          "lon": -86.78
+        },
+        {
+          "lat": 42.415,
+          "lon": -86.32
+        }
+      ],
+      "120ft": [
+        {
+          "lat": 42.995,
+          "lon": -87.77
+        },
+        {
+          "lat": 42.92,
+          "lon": -87.65
+        },
+        {
+          "lat": 42.84,
+          "lon": -87.52
+        },
+        {
+          "lat": 42.76,
+          "lon": -87.38
+        },
+        {
+          "lat": 42.68,
+          "lon": -87.24
+        },
+        {
+          "lat": 42.6,
+          "lon": -87.1
+        },
+        {
+          "lat": 42.52,
+          "lon": -86.95
+        },
+        {
+          "lat": 42.44,
+          "lon": -86.8
+        },
+        {
+          "lat": 42.405,
+          "lon": -86.3
+        }
+      ]
+    },
+    "hazards": [
+      {
+        "name": "Milwaukee Outer Harbor Shoal",
+        "type": "Shoal",
+        "lat": 42.995,
+        "lon": -87.865,
+        "depth": "18ft",
+        "description": "Shallow area northeast of harbor entrance"
+      },
+      {
+        "name": "Restricted Area - Naval Station",
+        "type": "Restricted Area",
+        "bounds": [
+          {
+            "lat": 42.98,
+            "lon": -87.83
+          },
+          {
+            "lat": 42.99,
+            "lon": -87.83
+          },
+          {
+            "lat": 42.99,
+            "lon": -87.81
+          },
+          {
+            "lat": 42.98,
+            "lon": -87.81
+          }
+        ],
+        "description": "Naval training area - restricted access"
+      }
+    ],
+    "traffic_lanes": {
+      "inbound_lane": [
+        {
+          "lat": 42.95,
+          "lon": -87.7
+        },
+        {
+          "lat": 42.85,
+          "lon": -87.5
+        },
+        {
+          "lat": 42.75,
+          "lon": -87.3
+        },
+        {
+          "lat": 42.65,
+          "lon": -87.1
+        },
+        {
+          "lat": 42.55,
+          "lon": -86.9
+        },
+        {
+          "lat": 42.45,
+          "lon": -86.7
+        }
+      ],
+      "outbound_lane": [
+        {
+          "lat": 42.98,
+          "lon": -87.75
+        },
+        {
+          "lat": 42.88,
+          "lon": -87.55
+        },
+        {
+          "lat": 42.78,
+          "lon": -87.35
+        },
+        {
+          "lat": 42.68,
+          "lon": -87.15
+        },
+        {
+          "lat": 42.58,
+          "lon": -86.95
+        },
+        {
+          "lat": 42.48,
+          "lon": -86.75
+        }
+      ]
+    }
+  },
+  "enc_references": {
+    "milwaukee_approaches": {
+      "chart_id": "US5MI22M",
+      "name": "Milwaukee Harbor and Approaches",
+      "scale": "1:40000",
+      "bounds": [
+        -87.95,
+        -87.7,
+        42.9,
+        43.1
+      ]
+    },
+    "central_lake": {
+      "chart_id": "US5MI21M",
+      "name": "Lake Michigan - Central Basin",
+      "scale": "1:120000",
+      "bounds": [
+        -87.8,
+        -86.2,
+        42.3,
+        43.2
+      ]
+    },
+    "south_haven": {
+      "chart_id": "US5MI25M",
+      "name": "South Haven Harbor",
+      "scale": "1:20000",
+      "bounds": [
+        -86.35,
+        -86.2,
+        42.35,
+        42.45
+      ]
+    }
+  }
+}

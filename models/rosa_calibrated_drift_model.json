@@ -1,0 +1,53 @@
+{
+  "calibration_source": "Rosa Fender Case - South Haven MI",
+  "calibration_date": "2025-10-12T17:20:55.860546",
+  "rosa_case_facts": {
+    "last_known": [
+      42.995,
+      -87.845
+    ],
+    "found_location": [
+      42.403,
+      -86.275
+    ],
+    "incident_time": "2025-08-22 20:00:00",
+    "found_time": "2025-08-23 08:00:00",
+    "drift_hours": 12
+  },
+  "actual_drift_analysis": {
+    "total_distance_km": 143.4049525244158,
+    "bearing_degrees": 117.27274858220383,
+    "total_speed_kmh": 11.950412710367983,
+    "south_speed_kmh": -5.475999999999988,
+    "east_speed_kmh": 10.62194840639535
+  },
+  "calibrated_parameters": {
+    "windage_factor": 0.1,
+    "current_factor": 1.0,
+    "stokes_drift": 0.005,
+    "wind_south_component": 3.1819805153394647,
+    "wind_east_component": -3.181980515339464,
+    "current_south_component": 0.05,
+    "current_east_component": 6.123233995736766e-18
+  },
+  "validation_results": {
+    "predicted_location": [
+      43.138298701137536,
+      -88.01431501815496
+    ],
+    "actual_location": [
+      42.403,
+      -86.275
+    ],
+    "error_km": 163.82775118237814,
+    "wind_contribution": [
+      13.74615582626649,
+      -13.746155826266486
+    ],
+    "current_contribution": [
+      2.1600000000000006,
+      2.6452370861582835e-16
+    ]
+  },
+  "model_version": "2.0_rosa_calibrated"
+}

@@ -1,0 +1,1206 @@
+{
+  "analysis_timestamp": "2025-10-12T17:29:43.848459",
+  "model_version": "Rosa_Optimized_v3.0_Enhanced",
+  "scenarios_analyzed": 225,
+  "search_areas": [
+    {
+      "area_id": 1,
+      "priority": "HIGH",
+      "type": "Hindcast_Drop_Zone",
+      "center_lat": 42.552142857142854,
+      "center_lon": -86.51785714285715,
+      "radius_km": 5.0,
+      "confidence": 0.85,
+      "search_method": "Expanding_Square",
+      "description": "Most likely drop zone based on hindcast analysis"
+    },
+    {
+      "area_id": 2,
+      "priority": "MEDIUM",
+      "type": "Forward_Prediction",
+      "center_lat": 42.39169078880837,
+      "center_lon": -86.3094745789312,
+      "radius_km": 3.0,
+      "confidence": 0.7,
+      "search_method": "Sector_Search",
+      "description": "Forward prediction from last known position"
+    },
+    {
+      "area_id": 3,
+      "priority": "MEDIUM",
+      "type": "Drift_Corridor",
+      "center_lat": 42.26128571428595,
+      "center_lon": -85.74543760016961,
+      "radius_km": 8.0,
+      "confidence": 0.6,
+      "search_method": "Track_Line_Search",
+      "description": "Probable drift corridor between drop and find locations"
+    },
+    {
+      "area_id": 4,
+      "priority": "LOW",
+      "type": "Extended_Search",
+      "center_lat": 42.403,
+      "center_lon": -86.275,
+      "radius_km": 15.0,
+      "confidence": 0.4,
+      "search_method": "Creeping_Line",
+      "description": "Extended search area (includes actual found location)"
+    }
+  ],
+  "priority_zones": [
+    {
+      "zone_id": 1,
+      "priority_level": "IMMEDIATE",
+      "action_required": "Deploy SAR assets immediately",
+      "center_lat": 42.583,
+      "center_lon": -86.525,
+      "search_radius_nm": 2.7,
+      "probability": 0.85,
+      "search_time_estimate_hours": 4,
+      "assets_recommended": [
+        "Coast Guard Cutter",
+        "Helicopter",
+        "Shore Team"
+      ],
+      "search_pattern": "Expanding Square",
+      "rationale": "Best hindcast match, 117.22 km accuracy"
+    },
+    {
+      "zone_id": 2,
+      "priority_level": "SECONDARY",
+      "action_required": "Deploy additional assets if Zone 1 unsuccessful",
+      "center_lat": 42.547,
+      "center_lon": -86.51071428571427,
+      "search_radius_nm": 5.4,
+      "probability": 0.65,
+      "search_time_estimate_hours": 8,
+      "assets_recommended": [
+        "Additional Aircraft",
+        "Shore Teams"
+      ],
+      "search_pattern": "Parallel Track",
+      "rationale": "Secondary hindcast scenarios cluster"
+    },
+    {
+      "zone_id": 3,
+      "priority_level": "EXTENDED",
+      "action_required": "Extended search operations",
+      "center_lat": 42.403,
+      "center_lon": -86.275,
+      "search_radius_nm": 16.2,
+      "probability": 0.45,
+      "search_time_estimate_hours": 24,
+      "assets_recommended": [
+        "Long-range Aircraft",
+        "Volunteer Vessels"
+      ],
+      "search_pattern": "Sector Search",
+      "rationale": "Extended search including shoreline areas"
+    }
+  ],
+  "hindcast_scenarios": [
+    {
+      "scenario_id": 211,
+      "start_lat": 42.583,
+      "start_lon": -86.525,
+      "end_lat": 41.99100000000047,
+      "end_lon": -84.96523915012921,
+      "distance_to_found_km": 117.21643735368137,
+      "distance_from_known_km": 117.0498429403332,
+      "accuracy_score": 0.21147651341585177
+    },
+    {
+      "scenario_id": 196,
+      "start_lat": 42.55728571428571,
+      "start_lon": -86.525,
+      "end_lat": 41.96528571428618,
+      "end_lon": -84.96587547793568,
+      "distance_to_found_km": 118.33533960047997,
+      "distance_from_known_km": 118.21852815334985,
+      "accuracy_score": 0.20949368463438345
+    },
+    {
+      "scenario_id": 181,
+      "start_lat": 42.531571428571425,
+      "start_lon": -86.525,
+      "end_lat": 41.939571428571895,
+      "end_lon": -84.96651097295278,
+      "distance_to_found_km": 119.51222854838575,
+      "distance_from_known_km": 119.44423254811954,
+      "accuracy_score": 0.2074478275037664
+    },
+    {
+      "scenario_id": 212,
+      "start_lat": 42.583,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.99100000000047,
+      "end_lon": -84.92952486441492,
+      "distance_to_found_km": 119.92989579295921,
+      "distance_from_known_km": 119.73701785075446,
+      "accuracy_score": 0.2067313449339427
+    },
+    {
+      "scenario_id": 166,
+      "start_lat": 42.50585714285714,
+      "start_lon": -86.525,
+      "end_lat": 41.91385714285761,
+      "end_lon": -84.96714563645428,
+      "distance_to_found_km": 120.7454085816675,
+      "distance_from_known_km": 120.72521941643721,
+      "accuracy_score": 0.20534655303431718
+    },
+    {
+      "scenario_id": 197,
+      "start_lat": 42.55728571428571,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.96528571428618,
+      "end_lon": -84.93016119222139,
+      "distance_to_found_km": 121.02351592625202,
+      "distance_from_known_km": 120.88081402564201,
+      "accuracy_score": 0.2048785417321476
+    },
+    {
+      "scenario_id": 151,
+      "start_lat": 42.48014285714286,
+      "start_lon": -86.525,
+      "end_lat": 41.88814285714333,
+      "end_lon": -84.96777946971112,
+      "distance_to_found_km": 122.03317313826942,
+      "distance_from_known_km": 122.05974824303271,
+      "accuracy_score": 0.20319723016412847
+    },
+    {
+      "scenario_id": 182,
+      "start_lat": 42.531571428571425,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.939571428571895,
+      "end_lon": -84.93079668723848,
+      "distance_to_found_km": 122.17431702072973,
+      "distance_from_known_km": 122.08086866590114,
+      "accuracy_score": 0.20296438904380207
+    },
+    {
+      "scenario_id": 213,
+      "start_lat": 42.583,
+      "start_lon": -86.45357142857144,
+      "end_lat": 41.99100000000047,
+      "end_lon": -84.89381057870064,
+      "distance_to_found_km": 122.65388547411847,
+      "distance_from_known_km": 122.43457625802077,
+      "accuracy_score": 0.2021772296450212
+    },
+    {
+      "scenario_id": 136,
+      "start_lat": 42.45442857142857,
+      "start_lon": -86.525,
+      "end_lat": 41.86242857142904,
+      "end_lon": -84.96841247399152,
+      "distance_to_found_km": 123.37381292452069,
+      "distance_from_known_km": 123.4460825746259,
+      "accuracy_score": 0.20100694360131796
+    },
+    {
+      "scenario_id": 167,
+      "start_lat": 42.50585714285714,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.91385714285761,
+      "end_lon": -84.93143135073998,
+      "distance_to_found_km": 123.38069900449452,
+      "distance_from_known_km": 123.33553959806012,
+      "accuracy_score": 0.20099581526790278
+    },
+    {
+      "scenario_id": 198,
+      "start_lat": 42.55728571428571,
+      "start_lon": -86.45357142857144,
+      "end_lat": 41.96528571428618,
+      "end_lon": -84.89444690650711,
+      "distance_to_found_km": 123.7232646951989,
+      "distance_from_known_km": 123.55449539301829,
+      "accuracy_score": 0.20044375891775665
+    },
+    {
+      "scenario_id": 152,
+      "start_lat": 42.48014285714286,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.88814285714333,
+      "end_lon": -84.93206518399683,
+      "distance_to_found_km": 124.64104795047301,
+      "distance_from_known_km": 124.64317751352365,
+      "accuracy_score": 0.19897955650493188
+    },
+    {
+      "scenario_id": 121,
+      "start_lat": 42.428714285714285,
+      "start_lon": -86.525,
+      "end_lat": 41.836714285714756,
+      "end_lon": -84.96904465056075,
+      "distance_to_found_km": 124.76562341694834,
+      "distance_from_known_km": 124.88249712729207,
+      "accuracy_score": 0.19878245995026783
+    },
+    {
+      "scenario_id": 183,
+      "start_lat": 42.531571428571425,
+      "start_lon": -86.45357142857144,
+      "end_lat": 41.939571428571895,
+      "end_lon": -84.8950824015242,
+      "distance_to_found_km": 124.84901973132602,
+      "distance_from_known_km": 124.72991081549718,
+      "accuracy_score": 0.1986507328652403
+    },
+    {
+      "scenario_id": 214,
+      "start_lat": 42.583,
+      "start_lon": -86.41785714285714,
+      "end_lat": 41.99100000000047,
+      "end_lon": -84.85809629298635,
+      "distance_to_found_km": 125.3877195781211,
+      "distance_from_known_km": 125.14184621571714,
+      "accuracy_score": 0.19780402782366316
+    },
+    {
+      "scenario_id": 137,
+      "start_lat": 42.45442857142857,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.86242857142904,
+      "end_lon": -84.93269818827723,
+      "distance_to_found_km": 125.95374375758117,
+      "distance_from_known_km": 126.00213336442084,
+      "accuracy_score": 0.19692211714321423
+    },
+    {
+      "scenario_id": 168,
+      "start_lat": 42.50585714285714,
+      "start_lon": -86.45357142857144,
+      "end_lat": 41.91385714285761,
+      "end_lon": -84.8957170650257,
+      "distance_to_found_km": 126.02963980721155,
+      "distance_from_known_km": 125.95926890916628,
+      "accuracy_score": 0.19680446262731774
+    },
+    {
+      "scenario_id": 106,
+      "start_lat": 42.403,
+      "start_lon": -86.525,
+      "end_lat": 41.81100000000047,
+      "end_lon": -84.96967600068187,
+      "distance_to_found_km": 126.20691163529904,
+      "distance_from_known_km": 126.3672841297436,
+      "accuracy_score": 0.19653020168962795
+    },
+    {
+      "scenario_id": 199,
+      "start_lat": 42.55728571428571,
+      "start_lon": -86.41785714285714,
+      "end_lat": 41.96528571428618,
+      "end_lon": -84.85873262079282,
+      "distance_to_found_km": 126.43384413056643,
+      "distance_from_known_km": 126.23884773939831,
+      "accuracy_score": 0.1961802233195245
+    },
+    {
+      "scenario_id": 153,
+      "start_lat": 42.48014285714286,
+      "start_lon": -86.45357142857144,
+      "end_lat": 41.88814285714333,
+      "end_lon": -84.89635089828255,
+      "distance_to_found_km": 127.26359792962637,
+      "distance_from_known_km": 127.24100615794981,
+      "accuracy_score": 0.19491110808942536
+    },
+    {
+      "scenario_id": 122,
+      "start_lat": 42.428714285714285,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.836714285714756,
+      "end_lon": -84.93333036484646,
+      "distance_to_found_km": 127.31716722011477,
+      "distance_from_known_km": 127.41076509891803,
+      "accuracy_score": 0.1948297374513817
+    },
+    {
+      "scenario_id": 184,
+      "start_lat": 42.531571428571425,
+      "start_lon": -86.41785714285714,
+      "end_lat": 41.939571428571895,
+      "end_lon": -84.85936811580991,
+      "distance_to_found_km": 127.53554258343705,
+      "distance_from_known_km": 127.39058460240362,
+      "accuracy_score": 0.19449873161558873
+    },
+    {
+      "scenario_id": 91,
+      "start_lat": 42.37728571428571,
+      "start_lon": -86.525,
+      "end_lat": 41.78528571428618,
+      "end_lon": -84.97030652561425,
+      "distance_to_found_km": 127.69600218627184,
+      "distance_from_known_km": 127.89875891404652,
+      "accuracy_score": 0.19425622843991328
+    },
+    {
+      "scenario_id": 215,
+      "start_lat": 42.583,
+      "start_lon": -86.38214285714287,
+      "end_lat": 41.99100000000047,
+      "end_lon": -84.82238200727207,
+      "distance_to_found_km": 128.1307675124565,
+      "distance_from_known_km": 127.85821035815172,
+      "accuracy_score": 0.19360219474873328
+    },
+    {
+      "scenario_id": 138,
+      "start_lat": 42.45442857142857,
+      "start_lon": -86.45357142857144,
+      "end_lat": 41.86242857142904,
+      "end_lon": -84.89698390256295,
+      "distance_to_found_km": 128.54935805770523,
+      "distance_from_known_km": 128.57355608329348,
+      "accuracy_score": 0.1929766412957773
+    },
+    {
+      "scenario_id": 169,
+      "start_lat": 42.50585714285714,
+      "start_lon": -86.41785714285714,
+      "end_lat": 41.91385714285761,
+      "end_lon": -84.86000277931142,
+      "distance_to_found_km": 128.69138761854967,
+      "distance_from_known_km": 128.59558613959675,
+      "accuracy_score": 0.1927653058469109
+    },
+    {
+      "scenario_id": 107,
+      "start_lat": 42.403,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.81100000000047,
+      "end_lon": -84.93396171496758,
+      "distance_to_found_km": 128.7297064646308,
+      "distance_from_known_km": 128.8674437271926,
+      "accuracy_score": 0.192708367892715
+    },
+    {
+      "scenario_id": 200,
+      "start_lat": 42.55728571428571,
+      "start_lon": -86.38214285714287,
+      "end_lat": 41.96528571428618,
+      "end_lon": -84.82301833507854,
+      "distance_to_found_km": 129.15457186143163,
+      "distance_from_known_km": 128.9332041002599,
+      "accuracy_score": 0.19207930726103203
+    },
+    {
+      "scenario_id": 76,
+      "start_lat": 42.351571428571425,
+      "start_lon": -86.525,
+      "end_lat": 41.759571428571896,
+      "end_lon": -84.97093622661517,
+      "distance_to_found_km": 129.23124258966882,
+      "distance_from_known_km": 129.47526477679165,
+      "accuracy_score": 0.19196622486947873
+    },
+    {
+      "scenario_id": 123,
+      "start_lat": 42.428714285714285,
+      "start_lon": -86.45357142857144,
+      "end_lat": 41.836714285714756,
+      "end_lon": -84.89761607913218,
+      "distance_to_found_km": 129.8853817492044,
+      "distance_from_known_km": 129.95535560943614,
+      "accuracy_score": 0.19100681577950138
+    },
+    {
+      "scenario_id": 154,
+      "start_lat": 42.48014285714286,
+      "start_lon": -86.41785714285714,
+      "end_lat": 41.88814285714333,
+      "end_lon": -84.86063661256826,
+      "distance_to_found_km": 129.8999338029242,
+      "distance_from_known_km": 129.8523695059059,
+      "accuracy_score": 0.19098558168592075
+    },
+    {
+      "scenario_id": 92,
+      "start_lat": 42.37728571428571,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.78528571428618,
+      "end_lon": -84.93459223989996,
+      "distance_to_found_km": 130.18976274735513,
+      "distance_from_known_km": 130.37055872185155,
+      "accuracy_score": 0.19056364975783155
+    },
+    {
+      "scenario_id": 185,
+      "start_lat": 42.531571428571425,
+      "start_lon": -86.38214285714287,
+      "end_lat": 41.939571428571895,
+      "end_lon": -84.82365383009564,
+      "distance_to_found_km": 130.23315362555672,
+      "distance_from_known_km": 130.0621757235547,
+      "accuracy_score": 0.1905006418677683
+    },
+    {
+      "scenario_id": 61,
+      "start_lat": 42.32585714285714,
+      "start_lon": -86.525,
+      "end_lat": 41.73385714285761,
+      "end_lon": -84.97156510493915,
+      "distance_to_found_km": 130.81100791002228,
+      "distance_from_known_km": 131.09517714287537,
+      "accuracy_score": 0.18966549453188059
+    },
+    {
+      "scenario_id": 216,
+      "start_lat": 42.583,
+      "start_lon": -86.34642857142858,
+      "end_lat": 41.99100000000047,
+      "end_lon": -84.78666772155778,
+      "distance_to_found_km": 130.88244949940187,
+      "distance_from_known_km": 130.5831006883174,
+      "accuracy_score": 0.18956275148736437
+    },
+    {
+      "scenario_id": 139,
+      "start_lat": 42.45442857142857,
+      "start_lon": -86.41785714285714,
+      "end_lat": 41.86242857142904,
+      "end_lon": -84.86126961684866,
+      "distance_to_found_km": 131.1597242734852,
+      "distance_from_known_km": 131.15944617324413,
+      "accuracy_score": 0.1891650435670262
+    },
+    {
+      "scenario_id": 108,
+      "start_lat": 42.403,
+      "start_lon": -86.45357142857144,
+      "end_lat": 41.81100000000047,
+      "end_lon": -84.8982474292533,
+      "distance_to_found_km": 131.27013425878445,
+      "distance_from_known_km": 131.38485084321908,
+      "accuracy_score": 0.18900714163552515
+    },
+    {
+      "scenario_id": 170,
+      "start_lat": 42.50585714285714,
+      "start_lon": -86.38214285714287,
+      "end_lat": 41.91385714285761,
+      "end_lon": -84.82428849359714,
+      "distance_to_found_km": 131.3651634943575,
+      "distance_from_known_km": 131.24373226611814,
+      "accuracy_score": 0.18887144729032657
+    },
+    {
+      "scenario_id": 77,
+      "start_lat": 42.351571428571425,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.759571428571896,
+      "end_lon": -84.93522194090087,
+      "distance_to_found_km": 131.69575561619078,
+      "distance_from_known_km": 131.9185227672186,
+      "accuracy_score": 0.18840090162574608
+    },
+    {
+      "scenario_id": 201,
+      "start_lat": 42.55728571428571,
+      "start_lon": -86.34642857142858,
+      "end_lat": 41.96528571428618,
+      "end_lon": -84.78730404936425,
+      "distance_to_found_km": 131.88481936224326,
+      "distance_from_known_km": 131.63694971989224,
+      "accuracy_score": 0.18813285159270257
+    },
+    {
+      "scenario_id": 46,
+      "start_lat": 42.30014285714286,
+      "start_lon": -86.525,
+      "end_lat": 41.70814285714333,
+      "end_lon": -84.97219316183732,
+      "distance_to_found_km": 132.43370472456925,
+      "distance_from_known_km": 132.75690707097522,
+      "accuracy_score": 0.18735895890475662
+    },
+    {
+      "scenario_id": 124,
+      "start_lat": 42.428714285714285,
+      "start_lon": -86.41785714285714,
+      "end_lat": 41.836714285714756,
+      "end_lon": -84.86190179341789,
+      "distance_to_found_km": 132.46929697367054,
+      "distance_from_known_km": 132.5153279326649,
+      "accuracy_score": 0.18730899590286854
+    },
+    {
+      "scenario_id": 155,
+      "start_lat": 42.48014285714286,
+      "start_lon": -86.38214285714287,
+      "end_lat": 41.88814285714333,
+      "end_lon": -84.82492232685398,
+      "distance_to_found_km": 132.54923254245085,
+      "distance_from_known_km": 132.47646672198223,
+      "accuracy_score": 0.187196882558298
+    },
+    {
+      "scenario_id": 93,
+      "start_lat": 42.37728571428571,
+      "start_lon": -86.45357142857144,
+      "end_lat": 41.78528571428618,
+      "end_lon": -84.89887795418568,
+      "distance_to_found_km": 132.70209007663829,
+      "distance_from_known_km": 132.86050226631406,
+      "accuracy_score": 0.18698286605444953
+    },
+    {
+      "scenario_id": 186,
+      "start_lat": 42.531571428571425,
+      "start_lon": -86.34642857142858,
+      "end_lat": 41.939571428571895,
+      "end_lon": -84.78793954438135,
+      "distance_to_found_km": 132.94117740451094,
+      "distance_from_known_km": 132.74402455337767,
+      "accuracy_score": 0.18664909839114224
+    },
+    {
+      "scenario_id": 62,
+      "start_lat": 42.32585714285714,
+      "start_lon": -86.48928571428571,
+      "end_lat": 41.73385714285761,
+      "end_lon": -84.93585081922485,
+      "distance_to_found_km": 133.2461274520246,
+      "distance_from_known_km": 133.50977588059567,
+      "accuracy_score": 0.18622511110373907
+    },
+    {
+      "scenario_id": 217,
+      "start_lat": 42.583,
+      "start_lon": -86.3107142857143,
+      "end_lat": 41.99100000000047,
+      "end_lon": -84.7509534358435,
+      "distance_to_found_km": 133.64223174931655,
+      "distance_from_known_km": 133.315993924767,
+      "accuracy_score": 0.185677255012723
+    },
+    {
+      "scenario_id": 140,
+      "start_lat": 42.45442857142857,
+      "start_lon": -86.38214285714287,
+      "end_lat": 41.86242857142904,
+      "end_lon": -84.82555533113438,
+      "distance_to_found_km": 133.78397845530554,
+      "distance_from_known_km": 133.7589641180687,
+      "accuracy_score": 0.1854819859638586
+    },
+    {
+      "scenario_id": 109,
+      "start_lat": 42.403,
+      "start_lon": -86.41785714285714,
+      "end_lat": 41.81100000000047,
+      "end_lon": -84.86253314353901,
+      "distance_to_found_km": 133.82719041609317,
+      "distance_from_known_km": 133.9185323851061,
+      "accuracy_score": 0.18542253919885854
+    }
+  ],
+  "forward_scenarios": [
+    {
+      "scenario_id": 1,
+      "description": "Base_Calibrated",
+      "start_lat": 42.995,
+      "start_lon": -87.845,
+      "end_lat": 42.40300000000047,
+      "end_lon": -86.27492914511208,
+      "trajectory": [
+        [
+          42.995,
+          -87.845
+        ],
+        [
+          42.99088888888889,
+          -87.83404485261687
+        ],
+        [
+          42.941555555555595,
+          -87.70264019873859
+        ],
+        [
+          42.8922222222223,
+          -87.57134080249494
+        ],
+        [
+          42.84288888888901,
+          -87.44014639820817
+        ],
+        [
+          42.79355555555571,
+          -87.30905672099287
+        ],
+        [
+          42.74422222222242,
+          -87.1780715067526
+        ],
+        [
+          42.694888888889125,
+          -87.04719049217648
+        ],
+        [
+          42.64555555555583,
+          -86.91641341473583
+        ],
+        [
+          42.596222222222536,
+          -86.7857400126808
+        ],
+        [
+          42.54688888888924,
+          -86.65517002503721
+        ],
+        [
+          42.49755555555595,
+          -86.52470319160311
+        ],
+        [
+          42.448222222222654,
+          -86.3943392529455
+        ],
+        [
+          42.40300000000047,
+          -86.27492914511208
+        ]
+      ],
+      "distance_to_actual_km": 0.005817792917448443,
+      "parameters_used": {
+        "windage_factor": 0.0,
+        "current_east_ms": 2.9732578891970878,
+        "current_north_ms": -1.5254949259259225,
+        "horizontal_diffusivity": 5.0,
+        "time_step_minutes": 5,
+        "stokes_drift_factor": 0.005
+      }
+    },
+    {
+      "scenario_id": 2,
+      "description": "Variation_0.9",
+      "start_lat": 42.995,
+      "start_lon": -87.845,
+      "end_lat": 42.462199999999704,
+      "end_lon": -86.43126995582308,
+      "trajectory": [
+        [
+          42.995,
+          -87.845
+        ],
+        [
+          42.991299999999995,
+          -87.83514036735518
+        ],
+        [
+          42.94689999999997,
+          -87.71687104260016
+        ],
+        [
+          42.90249999999995,
+          -87.59868699897255
+        ],
+        [
+          42.85809999999992,
+          -87.48058804270413
+        ],
+        [
+          42.8136999999999,
+          -87.36257398054688
+        ],
+        [
+          42.76929999999987,
+          -87.24464461977115
+        ],
+        [
+          42.72489999999985,
+          -87.12679976816356
+        ],
+        [
+          42.680499999999824,
+          -87.00903923402508
+        ],
+        [
+          42.6360999999998,
+          -86.89136282616899
+        ],
+        [
+          42.591699999999776,
+          -86.77377035391896
+        ],
+        [
+          42.54729999999975,
+          -86.65626162710707
+        ],
+        [
+          42.50289999999973,
+          -86.53883645607195
+        ],
+        [
+          42.462199999999704,
+          -86.43126995582308
+        ]
+      ],
+      "distance_to_actual_km": 14.41576113291127,
+      "parameters_used": {
+        "windage_factor": 0.0,
+        "current_east_ms": 2.6759321002773793,
+        "current_north_ms": -1.3729454333333302,
+        "horizontal_diffusivity": 5.0,
+        "time_step_minutes": 5,
+        "stokes_drift_factor": 0.005
+      }
+    },
+    {
+      "scenario_id": 3,
+      "description": "Variation_0.95",
+      "start_lat": 42.995,
+      "start_lon": -87.845,
+      "end_lat": 42.432600000000086,
+      "end_lon": -86.3530812189797,
+      "trajectory": [
+        [
+          42.995,
+          -87.845
+        ],
+        [
+          42.99109444444444,
+          -87.83459260998603
+        ],
+        [
+          42.94422777777778,
+          -87.70975547811433
+        ],
+        [
+          42.897361111111124,
+          -87.58501335375992
+        ],
+        [
+          42.850494444444465,
+          -87.46036600908492
+        ],
+        [
+          42.803627777777805,
+          -87.33581321689707
+        ],
+        [
+          42.756761111111146,
+          -87.21135475064716
+        ],
+        [
+          42.70989444444449,
+          -87.08699038442634
+        ],
+        [
+          42.66302777777783,
+          -86.96271989296356
+        ],
+        [
+          42.61616111111117,
+          -86.83854305162308
+        ],
+        [
+          42.56929444444451,
+          -86.71445963640168
+        ],
+        [
+          42.52242777777785,
+          -86.59046942392632
+        ],
+        [
+          42.47556111111119,
+          -86.4665721914515
+        ],
+        [
+          42.432600000000086,
+          -86.3530812189797
+        ]
+      ],
+      "distance_to_actual_km": 7.205302851448266,
+      "parameters_used": {
+        "windage_factor": 0.0,
+        "current_east_ms": 2.8245949947372333,
+        "current_north_ms": -1.4492201796296262,
+        "horizontal_diffusivity": 5.0,
+        "time_step_minutes": 5,
+        "stokes_drift_factor": 0.005
+      }
+    },
+    {
+      "scenario_id": 4,
+      "description": "Variation_1.05",
+      "start_lat": 42.995,
+      "start_lon": -87.845,
+      "end_lat": 42.373399999999826,
+      "end_lon": -86.19681367911093,
+      "trajectory": [
+        [
+          42.995,
+          -87.845
+        ],
+        [
+          42.99068333333333,
+          -87.83349709524772
+        ],
+        [
+          42.938883333333315,
+          -87.6955252044355
+        ],
+        [
+          42.8870833333333,
+          -87.55766934489553
+        ],
+        [
+          42.83528333333329,
+          -87.41992920914346
+        ],
+        [
+          42.78348333333327,
+          -87.2823044906576
+        ],
+        [
+          42.73168333333326,
+          -87.14479488387451
+        ],
+        [
+          42.679883333333244,
+          -87.00740008418482
+        ],
+        [
+          42.62808333333323,
+          -86.87011978792899
+        ],
+        [
+          42.576283333333215,
+          -86.73295369239288
+        ],
+        [
+          42.5244833333332,
+          -86.59590149580382
+        ],
+        [
+          42.47268333333319,
+          -86.458962897326
+        ],
+        [
+          42.42088333333317,
+          -86.32213759705672
+        ],
+        [
+          42.373399999999826,
+          -86.19681367911093
+        ]
+      ],
+      "distance_to_actual_km": 7.215674080615302,
+      "parameters_used": {
+        "windage_factor": 0.0,
+        "current_east_ms": 3.1219207836569423,
+        "current_north_ms": -1.6017696722222188,
+        "horizontal_diffusivity": 5.0,
+        "time_step_minutes": 5,
+        "stokes_drift_factor": 0.005
+      }
+    },
+    {
+      "scenario_id": 5,
+      "description": "Variation_1.1",
+      "start_lat": 42.995,
+      "start_lon": -87.845,
+      "end_lat": 42.34380000000021,
+      "end_lon": -86.11873476596391,
+      "trajectory": [
+        [
+          42.995,
+          -87.845
+        ],
+        [
+          42.99047777777778,
+          -87.83294933787856
+        ],
+        [
+          42.93621111111113,
+          -87.68841049516745
+        ],
+        [
+          42.88194444444448,
+          -87.54399898067965
+        ],
+        [
+          42.82767777777783,
+          -87.39971444096088
+        ],
+        [
+          42.77341111111118,
+          -87.25555652371587
+        ],
+        [
+          42.71914444444453,
+          -87.11152487780299
+        ],
+        [
+          42.66487777777788,
+          -86.96761915322868
+        ],
+        [
+          42.61061111111123,
+          -86.82383900114226
+        ],
+        [
+          42.55634444444458,
+          -86.68018407383038
+        ],
+        [
+          42.502077777777934,
+          -86.53665402471184
+        ],
+        [
+          42.447811111111285,
+          -86.39324850833222
+        ],
+        [
+          42.393544444444636,
+          -86.2499671803587
+        ],
+        [
+          42.34380000000021,
+          -86.11873476596391
+        ]
+      ],
+      "distance_to_actual_km": 14.426188157581722,
+      "parameters_used": {
+        "windage_factor": 0.0,
+        "current_east_ms": 3.2705836781167967,
+        "current_north_ms": -1.6780444185185148,
+        "horizontal_diffusivity": 5.0,
+        "time_step_minutes": 5,
+        "stokes_drift_factor": 0.005
+      }
+    },
+    {
+      "scenario_id": 6,
+      "description": "Wind_225",
+      "start_lat": 42.995,
+      "start_lon": -87.845,
+      "end_lat": 42.359094803610326,
+      "end_lon": -86.33520001099663,
+      "trajectory": [
+        [
+          42.995,
+          -87.845
+        ],
+        [
+          42.990583991691736,
+          -87.83446171300596
+        ],
+        [
+          42.9375918919926,
+          -87.70806128133742
+        ],
+        [
+          42.88459979229346,
+          -87.58176959016292
+        ],
+        [
+          42.83160769259432,
+          -87.4555863447011
+        ],
+        [
+          42.77861559289518,
+          -87.32951125111468
+        ],
+        [
+          42.72562349319604,
+          -87.20354401650602
+        ],
+        [
+          42.6726313934969,
+          -87.0776843489129
+        ],
+        [
+          42.61963929379776,
+          -86.95193195730421
+        ],
+        [
+          42.56664719409862,
+          -86.82628655157568
+        ],
+        [
+          42.51365509439948,
+          -86.70074784254561
+        ],
+        [
+          42.46066299470034,
+          -86.57531554195072
+        ],
+        [
+          42.4076708950012,
+          -86.4499893624419
+        ],
+        [
+          42.359094803610326,
+          -86.33520001099663
+        ]
+      ],
+      "distance_to_actual_km": 6.948667345406512,
+      "parameters_used": {
+        "windage_factor": 0.0,
+        "current_east_ms": 2.86012080420724,
+        "current_north_ms": -1.6386320109157702,
+        "horizontal_diffusivity": 5.0,
+        "time_step_minutes": 5,
+        "stokes_drift_factor": 0.005
+      }
+    },
+    {
+      "scenario_id": 7,
+      "description": "Wind_240",
+      "start_lat": 42.995,
+      "start_lon": -87.845,
+      "end_lat": 42.35643150685586,
+      "end_lon": -86.38522588338502,
+      "trajectory": [
+        [
+          42.995,
+          -87.845
+        ],
+        [
+          42.990565496575385,
+          -87.83481067405232
+        ],
+        [
+          42.93735145548004,
+          -87.71259605957384
+        ],
+        [
+          42.884137414384696,
+          -87.59048702389157
+        ],
+        [
+          42.83092337328935,
+          -87.46848327959901
+        ],
+        [
+          42.77770933219401,
+          -87.34658454021388
+        ],
+        [
+          42.72449529109866,
+          -87.22479052017387
+        ],
+        [
+          42.67128125000332,
+          -87.10310093483243
+        ],
+        [
+          42.61806720890797,
+          -86.98151550045453
+        ],
+        [
+          42.56485316781263,
+          -86.86003393421254
+        ],
+        [
+          42.511639126717284,
+          -86.73865595418194
+        ],
+        [
+          42.45842508562194,
+          -86.61738127933738
+        ],
+        [
+          42.405211044526595,
+          -86.4962096295483
+        ],
+        [
+          42.35643150685586,
+          -86.38522588338502
+        ]
+      ],
+      "distance_to_actual_km": 10.430036649974326,
+      "parameters_used": {
+        "windage_factor": 0.0,
+        "current_east_ms": 2.7654117922888224,
+        "current_north_ms": -1.6454949259259226,
+        "horizontal_diffusivity": 5.0,
+        "time_step_minutes": 5,
+        "stokes_drift_factor": 0.005
+      }
+    },
+    {
+      "scenario_id": 8,
+      "description": "Wind_270",
+      "start_lat": 42.995,
+      "start_lon": -87.845,
+      "end_lat": 42.40300000000047,
+      "end_lon": -86.38054197207828,
+      "trajectory": [
+        [
+          42.995,
+          -87.845
+        ],
+        [
+          42.99088888888889,
+          -87.83478176463672
+        ],
+        [
+          42.941555555555595,
+          -87.71221621310177
+        ],
+        [
+          42.8922222222223,
+          -87.5897488389118
+        ],
+        [
+          42.84288888888901,
+          -87.46737939426029
+        ],
+        [
+          42.79355555555571,
+          -87.34510763207966
+        ],
+        [
+          42.74422222222242,
+          -87.22293330603827
+        ],
+        [
+          42.694888888889125,
+          -87.10085617053711
+        ],
+        [
+          42.64555555555583,
+          -86.97887598070687
+        ],
+        [
+          42.596222222222536,
+          -86.8569924924047
+        ],
+        [
+          42.54688888888924,
+          -86.73520546221113
+        ],
+        [
+          42.49755555555595,
+          -86.613514647427
+        ],
+        [
+          42.448222222222654,
+          -86.49191980607046
+        ],
+        [
+          42.40300000000047,
+          -86.38054197207828
+        ]
+      ],
+      "distance_to_actual_km": 8.665898940385414,
+      "parameters_used": {
+        "windage_factor": 0.0,
+        "current_east_ms": 2.7732578891970876,
+        "current_north_ms": -1.5254949259259225,
+        "horizontal_diffusivity": 5.0,
+        "time_step_minutes": 5,
+        "stokes_drift_factor": 0.005
+      }
+    }
+  ]
+}

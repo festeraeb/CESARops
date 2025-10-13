@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosa Case - Nautical Analysis</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+        }
+        
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        
+        .info-panel {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 20, 40, 0.95);
+            border: 2px solid #4a90e2;
+            border-radius: 8px;
+            padding: 15px;
+            max-width: 350px;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .timeline-panel {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 20, 40, 0.95);
+            border: 2px solid #4a90e2;
+            border-radius: 8px;
+            padding: 15px;
+            max-width: 500px;
+            z-index: 1000;
+        }
+        
+        .nautical-legend {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 20, 40, 0.95);
+            border: 2px solid #4a90e2;
+            border-radius: 8px;
+            padding: 15px;
+            max-width: 250px;
+            z-index: 1000;
+        }
+        
+        .rosa-marker {
+            background: #ff4444;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+        }
+        
+        .nav-aid-marker {
+            background: #44ff44;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+        }
+        
+        .depth-line {
+            stroke: #4a90e2;
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 5,5;
+        }
+        
+        .shipping-lane {
+            stroke: #ff8800;
+            stroke-width: 3;
+            fill: none;
+            opacity: 0.7;
+        }
+        
+        h3 { color: #4a90e2; margin-top: 0; }
+        .coordinate { font-family: monospace; color: #88cc88; }
+        .time { color: #ffaa44; }
+        .depth { color: #4a90e2; }
+        .warning { color: #ff6666; }
+        
+        .legend-item {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #fff;
+        }
+        
+        .button-group {
+            margin: 10px 0;
+        }
+        
+        .nav-button {
+            background: #4a90e2;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            margin: 2px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .nav-button:hover {
+            background: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div class="info-panel">
+        <h3>🚤 Rosa Case Analysis</h3>
+        <p><strong>Vessel:</strong> Rosa (8 knots capability)</p>
+        <p><strong>Object:</strong> Boat fender</p>
+        <p><strong>Drift Duration:</strong> 6.5 hours</p>
+        <p><strong>Analysis:</strong> ✅ FEASIBLE</p>
+        
+        <div class="button-group">
+            <button class="nav-button" onclick="showDeparture()">Departure</button>
+            <button class="nav-button" onclick="showDrop()">Drop Zone</button>
+            <button class="nav-button" onclick="showFound()">Found</button>
+            <button class="nav-button" onclick="showFull()">Full Path</button>
+        </div>
+        
+        <p><span class="coordinate">Distance:</span> ~65 nautical miles</p>
+        <p><span class="coordinate">Accuracy:</span> 114.7 km (enhanced model)</p>
+    </div>
+    
+    <div class="timeline-panel">
+        <h3>📅 Timeline Analysis</h3>
+        <p><span class="time">15:00 CST</span> - Rosa departs Milwaukee</p>
+        <p><span class="time">17:30 CST</span> - Estimated fender drop (5 NM offshore)</p>
+        <p><span class="time">00:00 CST</span> - Fender found at South Haven</p>
+        
+        <p><strong>Boat Capability:</strong></p>
+        <p>• Required speed: <span class="coordinate">2.0 knots</span></p>
+        <p>• Available margin: <span class="coordinate">6.0 knots</span></p>
+        <p>• <span style="color: #44ff44;">✅ EASILY FEASIBLE</span></p>
+    </div>
+    
+    <div class="nautical-legend">
+        <h3>🗺️ Nautical Features</h3>
+        
+        <div class="legend-item">
+            <div class="legend-color" style="background: #ff4444;"></div>
+            <span>Rosa Analysis Points</span>
+        </div>
+        
+        <div class="legend-item">
+            <div class="legend-color" style="background: #44ff44;"></div>
+            <span>Navigation Aids</span>
+        </div>
+        
+        <div class="legend-item">
+            <div class="legend-color" style="background: #4a90e2; border-style: dashed;"></div>
+            <span>Depth Contours</span>
+        </div>
+        
+        <div class="legend-item">
+            <div class="legend-color" style="background: #ff8800;"></div>
+            <span>Shipping Lanes</span>
+        </div>
+        
+        <div class="legend-item">
+            <div class="legend-color" style="background: #ffff44;"></div>
+            <span>Hazards/Restrictions</span>
+        </div>
+        
+        <p class="depth"><strong>Depths:</strong></p>
+        <p class="depth">• Blue dashed: 30ft, 60ft, 120ft</p>
+        <p class="warning"><strong>⚠️ For navigation reference only</strong></p>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize map centered on Lake Michigan
+        const map = L.map('map').setView([42.7, -87.0], 10);
+        
+        // Base layer - OpenSeaMap for nautical context
+        const nauticalBase = L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png', {
+            attribution: 'Map data: &copy; <a href="http://www.openseamap.org">OpenSeaMap</a> contributors'
+        });
+        
+        // Satellite base layer
+        const satelliteBase = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri'
+        });
+        
+        // Street map base
+        const streetBase = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        });
+        
+        // Add default base layer
+        streetBase.addTo(map);
+        
+        // Layer control
+        const baseLayers = {
+            "Street Map": streetBase,
+            "Satellite": satelliteBase,
+            "Nautical Chart": nauticalBase
+        };
+        
+        L.control.layers(baseLayers).addTo(map);
+        
+        // Rosa case data
+        const rosaData = {
+        "departure": {
+                "lat": 42.995,
+                "lon": -87.845,
+                "name": "Milwaukee Departure"
+        },
+        "estimated_drop": {
+                "lat": 42.995,
+                "lon": -87.7313,
+                "name": "5 NM Offshore (Estimated)"
+        },
+        "best_drop": {
+                "lat": 42.86,
+                "lon": -87.5513,
+                "name": "Best Hindcast Drop"
+        },
+        "found": {
+                "lat": 42.403,
+                "lon": -86.275,
+                "name": "Found at South Haven"
+        },
+        "timeline": {
+                "departure_time": "2025-08-22 15:00:00 CST",
+                "drop_time": "2025-08-22 17:30:00 CST",
+                "found_time": "2025-08-23 00:00:00 CST",
+                "drift_duration": 6.5
+        }
+};
+        
+        // Navigation aids data
+        const navAids = [
+        {
+                "name": "Milwaukee Breakwater Light",
+                "type": "Light",
+                "lat": 43.0228,
+                "lon": -87.8964,
+                "characteristics": "Fl W 2.5s 61ft",
+                "description": "White light flashing every 2.5 seconds"
+        },
+        {
+                "name": "Milwaukee Harbor Entrance",
+                "type": "Range Lights",
+                "lat": 43.0156,
+                "lon": -87.8889,
+                "characteristics": "F R Front, Oc R 4s Rear",
+                "description": "Red range lights for harbor entrance"
+        },
+        {
+                "name": "Racine Reef Light",
+                "type": "Light Station",
+                "lat": 42.7614,
+                "lon": -87.7844,
+                "characteristics": "Fl W 6s 85ft",
+                "description": "Major light station mid-lake"
+        },
+        {
+                "name": "South Haven Pier Lights",
+                "type": "Pier Lights",
+                "lat": 42.4031,
+                "lon": -86.2947,
+                "characteristics": "F R South, F G North",
+                "description": "Harbor entrance pier lights"
+        },
+        {
+                "name": "South Haven Light",
+                "type": "Lighthouse",
+                "lat": 42.4053,
+                "lon": -86.2928,
+                "characteristics": "Fl W 5s 35ft",
+                "description": "Historic South Haven lighthouse"
+        }
+];
+        
+        // Depth contours data
+        const depthContours = {
+        "30ft": [
+                {
+                        "lat": 42.995,
+                        "lon": -87.82
+                },
+                {
+                        "lat": 42.95,
+                        "lon": -87.75
+                },
+                {
+                        "lat": 42.9,
+                        "lon": -87.68
+                },
+                {
+                        "lat": 42.85,
+                        "lon": -87.6
+                },
+                {
+                        "lat": 42.8,
+                        "lon": -87.5
+                },
+                {
+                        "lat": 42.75,
+                        "lon": -87.4
+                },
+                {
+                        "lat": 42.7,
+                        "lon": -87.3
+                },
+                {
+                        "lat": 42.65,
+                        "lon": -87.2
+                },
+                {
+                        "lat": 42.6,
+                        "lon": -87.1
+                },
+                {
+                        "lat": 42.55,
+                        "lon": -87.0
+                },
+                {
+                        "lat": 42.5,
+                        "lon": -86.9
+                },
+                {
+                        "lat": 42.45,
+                        "lon": -86.8
+                },
+                {
+                        "lat": 42.42,
+                        "lon": -86.35
+                }
+        ],
+        "60ft": [
+                {
+                        "lat": 42.995,
+                        "lon": -87.8
+                },
+                {
+                        "lat": 42.94,
+                        "lon": -87.72
+                },
+                {
+                        "lat": 42.88,
+                        "lon": -87.63
+                },
+                {
+                        "lat": 42.82,
+                        "lon": -87.53
+                },
+                {
+                        "lat": 42.76,
+                        "lon": -87.42
+                },
+                {
+                        "lat": 42.7,
+                        "lon": -87.3
+                },
+                {
+                        "lat": 42.64,
+                        "lon": -87.18
+                },
+                {
+                        "lat": 42.58,
+                        "lon": -87.05
+                },
+                {
+                        "lat": 42.52,
+                        "lon": -86.92
+                },
+                {
+                        "lat": 42.46,
+                        "lon": -86.78
+                },
+                {
+                        "lat": 42.415,
+                        "lon": -86.32
+                }
+        ],
+        "120ft": [
+                {
+                        "lat": 42.995,
+                        "lon": -87.77
+                },
+                {
+                        "lat": 42.92,
+                        "lon": -87.65
+                },
+                {
+                        "lat": 42.84,
+                        "lon": -87.52
+                },
+                {
+                        "lat": 42.76,
+                        "lon": -87.38
+                },
+                {
+                        "lat": 42.68,
+                        "lon": -87.24
+                },
+                {
+                        "lat": 42.6,
+                        "lon": -87.1
+                },
+                {
+                        "lat": 42.52,
+                        "lon": -86.95
+                },
+                {
+                        "lat": 42.44,
+                        "lon": -86.8
+                },
+                {
+                        "lat": 42.405,
+                        "lon": -86.3
+                }
+        ]
+};
+        
+        // Traffic lanes data
+        const trafficLanes = {
+        "inbound_lane": [
+                {
+                        "lat": 42.95,
+                        "lon": -87.7
+                },
+                {
+                        "lat": 42.85,
+                        "lon": -87.5
+                },
+                {
+                        "lat": 42.75,
+                        "lon": -87.3
+                },
+                {
+                        "lat": 42.65,
+                        "lon": -87.1
+                },
+                {
+                        "lat": 42.55,
+                        "lon": -86.9
+                },
+                {
+                        "lat": 42.45,
+                        "lon": -86.7
+                }
+        ],
+        "outbound_lane": [
+                {
+                        "lat": 42.98,
+                        "lon": -87.75
+                },
+                {
+                        "lat": 42.88,
+                        "lon": -87.55
+                },
+                {
+                        "lat": 42.78,
+                        "lon": -87.35
+                },
+                {
+                        "lat": 42.68,
+                        "lon": -87.15
+                },
+                {
+                        "lat": 42.58,
+                        "lon": -86.95
+                },
+                {
+                        "lat": 42.48,
+                        "lon": -86.75
+                }
+        ]
+};
+        
+        // Rosa markers
+        const departureMarker = L.circleMarker([rosaData.departure.lat, rosaData.departure.lon], {
+            radius: 10,
+            fillColor: '#ff4444',
+            color: '#ffffff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.8
+        }).addTo(map);
+        departureMarker.bindPopup(`
+            <h3>🚤 Rosa Departure</h3>
+            <p><strong>Milwaukee Harbor</strong></p>
+            <p><strong>Time:</strong> August 22, 2025 - 3:00 PM CST</p>
+            <p><strong>Coordinates:</strong> ${rosaData.departure.lat.toFixed(4)}°N, ${Math.abs(rosaData.departure.lon).toFixed(4)}°W</p>
+            <p><strong>Weather:</strong> Late August, SW winds</p>
+        `);
+        
+        const estimatedDropMarker = L.circleMarker([rosaData.estimated_drop.lat, rosaData.estimated_drop.lon], {
+            radius: 8,
+            fillColor: '#ffaa44',
+            color: '#ffffff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.8
+        }).addTo(map);
+        estimatedDropMarker.bindPopup(`
+            <h3>📍 Estimated Drop (5 NM)</h3>
+            <p><strong>Time:</strong> ~5:30 PM CST</p>
+            <p><strong>Coordinates:</strong> ${rosaData.estimated_drop.lat.toFixed(4)}°N, ${Math.abs(rosaData.estimated_drop.lon).toFixed(4)}°W</p>
+            <p><strong>Feasibility:</strong> ✅ YES (6 knot margin)</p>
+            <p><strong>Distance from shore:</strong> 5 nautical miles</p>
+        `);
+        
+        const bestDropMarker = L.circleMarker([rosaData.best_drop.lat, rosaData.best_drop.lon], {
+            radius: 10,
+            fillColor: '#ff00ff',
+            color: '#ffffff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.8
+        }).addTo(map);
+        bestDropMarker.bindPopup(`
+            <h3>🎯 Best Hindcast Drop</h3>
+            <p><strong>Coordinates:</strong> ${rosaData.best_drop.lat.toFixed(4)}°N, ${Math.abs(rosaData.best_drop.lon).toFixed(4)}°W</p>
+            <p><strong>Accuracy:</strong> 114.7 km to South Haven</p>
+            <p><strong>Parameters:</strong> Strong Current model</p>
+            <p><strong>Distance from 5NM estimate:</strong> 21 km</p>
+        `);
+        
+        const foundMarker = L.circleMarker([rosaData.found.lat, rosaData.found.lon], {
+            radius: 12,
+            fillColor: '#44ff44',
+            color: '#ffffff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.8
+        }).addTo(map);
+        foundMarker.bindPopup(`
+            <h3>🏁 Found at South Haven</h3>
+            <p><strong>Time:</strong> August 23, 2025 - Midnight CST</p>
+            <p><strong>Coordinates:</strong> ${rosaData.found.lat.toFixed(4)}°N, ${Math.abs(rosaData.found.lon).toFixed(4)}°W</p>
+            <p><strong>Total drift time:</strong> 6.5 hours</p>
+            <p><strong>Object:</strong> Boat fender</p>
+        `);
+        
+        // Drift path
+        const driftPath = L.polyline([
+            [rosaData.best_drop.lat, rosaData.best_drop.lon],
+            [rosaData.found.lat, rosaData.found.lon]
+        ], {
+            color: '#ff00ff',
+            weight: 4,
+            opacity: 0.8,
+            dashArray: '10, 5'
+        }).addTo(map);
+        driftPath.bindPopup('<h3>🌊 Best Hindcast Drift Path</h3><p>6.5-hour drift using Strong Current parameters</p>');
+        
+        // Boat track
+        const boatTrack = L.polyline([
+            [rosaData.departure.lat, rosaData.departure.lon],
+            [rosaData.estimated_drop.lat, rosaData.estimated_drop.lon]
+        ], {
+            color: '#4444ff',
+            weight: 3,
+            opacity: 0.8
+        }).addTo(map);
+        boatTrack.bindPopup('<h3>🚤 Rosa Boat Track</h3><p>Milwaukee to 5 NM offshore (2.5 hours, 2 knots required)</p>');
+        
+        // Add navigation aids
+        navAids.forEach(aid => {
+            const marker = L.circleMarker([aid.lat, aid.lon], {
+                radius: 6,
+                fillColor: '#44ff44',
+                color: '#ffffff',
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.9
+            }).addTo(map);
+            
+            marker.bindPopup(`
+                <h3>⚓ ${aid.name}</h3>
+                <p><strong>Type:</strong> ${aid.type}</p>
+                <p><strong>Characteristics:</strong> ${aid.characteristics}</p>
+                <p><strong>Description:</strong> ${aid.description}</p>
+            `);
+        });
+        
+        // Add depth contours
+        Object.keys(depthContours).forEach(depth => {
+            const coordinates = depthContours[depth].map(point => [point.lat, point.lon]);
+            
+            L.polyline(coordinates, {
+                color: '#4a90e2',
+                weight: 2,
+                opacity: 0.7,
+                dashArray: '8, 4'
+            }).addTo(map).bindPopup(`<h3>🌊 ${depth} Depth Contour</h3>`);
+        });
+        
+        // Add shipping lanes
+        Object.keys(trafficLanes).forEach(lane => {
+            const coordinates = trafficLanes[lane].map(point => [point.lat, point.lon]);
+            
+            L.polyline(coordinates, {
+                color: '#ff8800',
+                weight: 4,
+                opacity: 0.6
+            }).addTo(map).bindPopup(`<h3>🚢 Commercial ${lane.replace('_', ' ')}</h3>`);
+        });
+        
+        // Navigation functions
+        function showDeparture() {
+            map.setView([rosaData.departure.lat, rosaData.departure.lon], 13);
+            departureMarker.openPopup();
+        }
+        
+        function showDrop() {
+            map.setView([rosaData.best_drop.lat, rosaData.best_drop.lon], 12);
+            bestDropMarker.openPopup();
+        }
+        
+        function showFound() {
+            map.setView([rosaData.found.lat, rosaData.found.lon], 13);
+            foundMarker.openPopup();
+        }
+        
+        function showFull() {
+            const group = new L.featureGroup([departureMarker, estimatedDropMarker, bestDropMarker, foundMarker]);
+            map.fitBounds(group.getBounds().pad(0.1));
+        }
+        
+        // Add scale bar
+        L.control.scale({
+            imperial: true,
+            metric: true
+        }).addTo(map);
+        
+        // Add coordinates display
+        map.on('mousemove', function(e) {
+            const lat = e.latlng.lat.toFixed(5);
+            const lon = e.latlng.lng.toFixed(5);
+            console.log(`Coordinates: ${lat}, ${lon}`);
+        });
+        
+    </script>
+</body>
+</html>
