@@ -19,16 +19,16 @@ def test_imports():
         import pandas
         import matplotlib
         import requests
-        print("✓ Core scientific libraries imported successfully")
+        print("[OK] Core scientific libraries imported successfully")
         
         # Test CESAROPS modules
         import sarops
         import cesarops
-        print("✓ CESAROPS modules imported successfully")
+        print("[OK] CESAROPS modules imported successfully")
         
         return True
     except ImportError as e:
-        print(f"✗ Import failed: {e}")
+        print(f"[FAIL] Import failed: {e}")
         return False
 
 def test_database_init():
@@ -37,10 +37,10 @@ def test_database_init():
     try:
         from sarops import init_drift_db
         init_drift_db()
-        print("✓ Database initialization successful")
+        print("[OK] Database initialization successful")
         return True
     except Exception as e:
-        print(f"✗ Database initialization failed: {e}")
+        print(f"[FAIL] Database initialization failed: {e}")
         return False
 
 def test_basic_functionality():
@@ -52,13 +52,13 @@ def test_basic_functionality():
         # Test distance calculation
         distance = calculate_distance(42.0, -87.0, 43.0, -86.0)
         if distance > 0:
-            print(f"✓ Distance calculation: {distance:.2f} nm")
+            print(f"[OK] Distance calculation: {distance:.2f} nm")
             return True
         else:
-            print("✗ Distance calculation returned invalid result")
+            print("[FAIL] Distance calculation returned invalid result")
             return False
     except Exception as e:
-        print(f"✗ Basic functionality test failed: {e}")
+        print(f"[FAIL] Basic functionality test failed: {e}")
         return False
 
 def main():
@@ -82,7 +82,7 @@ def main():
             else:
                 failed += 1
         except Exception as e:
-            print(f"✗ Test {test.__name__} crashed: {e}")
+            print(f"[FAIL] Test {test.__name__} crashed: {e}")
             failed += 1
     
     print("\n" + "=" * 30)
@@ -92,10 +92,10 @@ def main():
     
     # Exit with proper code for CI
     if failed == 0:
-        print("🎉 All tests passed!")
+        print("[SUCCESS] All tests passed!")
         sys.exit(0)
     else:
-        print("❌ Some tests failed!")
+        print("[ERROR] Some tests failed!")
         sys.exit(1)
 
 if __name__ == "__main__":
