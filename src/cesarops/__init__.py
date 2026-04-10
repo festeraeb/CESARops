@@ -29,4 +29,6 @@ __all__ = [
     "remote_dispatch",
     "tile_selector",
     "tile_geometry",
+    # SAR drift modeling subpackage
+    "drift",
 ]
