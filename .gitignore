@@ -24,6 +24,10 @@ downloads/
 
 # Rust
 slicer/target/
+rust/sonarsniffer/target/
+rust/sonarsniffer/soundtiles/target/
+rust/sonarsniffer/src-tauri/target/
+target/
 
 # IDE
 .vscode/

@@ -1,0 +1,4 @@
+[submodule "rust/sonarsniffer"]
+	path = rust/sonarsniffer
+	url = https://github.com/festeraeb/SonarSniffer-by-NautiDog.git
+	branch = curvelet-alpha

@@ -1,3 +1,7 @@
 [workspace]
 members = ["slicer"]
+# rust/sonarsniffer is a git submodule (festeraeb/SonarSniffer-by-NautiDog @ curvelet-alpha).
+# It declares its own workspace (soundtiles + src-tauri) and must be built separately:
+#   cd rust/sonarsniffer && cargo build --release
+exclude = ["rust/sonarsniffer"]
 resolver = "2"
