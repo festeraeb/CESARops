@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cesarops"
+version = "0.2.0"
+description = "CESAROPS — Coastal/Estuarine SAR Operations System: satellite sensor fusion, GPU/TPU processing, and AI-directed anomaly detection"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "festeraeb" }
+]
+keywords = ["sar", "satellite", "sonar", "anomaly-detection", "wreck-detection", "tpu", "gpu"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+
+dependencies = [
+    "requests>=2.31",
+    "Pillow>=10.0",
+    "numpy>=1.26",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+gpu = ["cupy-cuda12x>=12.0"]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[project.scripts]
+cesarops = "cesarops.agent_runner:main"
+cesarops-director = "cesarops.ai_director:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cesarops"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

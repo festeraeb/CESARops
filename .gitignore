@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.env
+.venv/
+venv/
+*.db
+*.sqlite
+*.sqlite3
+
+# Outputs / run artifacts
+outputs/
+downloads/
+*.geojson
+*.tif
+*.tiff
+
+# Rust
+slicer/target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets
+.env
+*.pem
+*.key
