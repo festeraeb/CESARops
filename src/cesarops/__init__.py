@@ -12,9 +12,13 @@ Core components:
   database     — Census database interface
   tpu_client   — Remote TPU client
   triple_lock  — Triple-lock fusion detection
+
+Subpackages:
+  drift        — SAR drift modeling and search-and-rescue operations
+  scanner      — Satellite data acquisition (NASA CMR, HLS, SWOT, SAR, Landsat)
 """
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __all__ = [
     "engine",
     "orchestrator",
@@ -31,4 +35,6 @@ __all__ = [
     "tile_geometry",
     # SAR drift modeling subpackage
     "drift",
+    # Satellite scanner subpackage
+    "scanner",
 ]
