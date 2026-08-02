@@ -1,5 +1,36 @@
 # CESAROPS - Civilian Emergency SAR Operations
 
+> [!NOTE]
+> ### AMD Lemonade Challenge
+> CESARops orchestrates local, open-weight models for maritime Search and Rescue (SAR). For the AMD Lemonade challenge, we have integrated Lemonade as a permanent production execution backend running on legacy AMD Polaris hardware via Vulkan, showcasing heterogeneous computing without requiring datacenter-class GPUs.
+> 
+> ![Lemonade Dashboard Placeholder](https://cesarops.com/lemonade/assets/lemonade_dashboard_placeholder.png)
+> 
+> [Interactive Lemonade Demonstration](https://cesarops.com/lemonade/)
+
+## Project Architecture & Ecosystem Map
+
+CESARops is organized into a modular ecosystem, rather than a single monolithic repository. This ensures maximum flexibility for heterogeneous inference, distributed orchestration, and external integrations (like photogrammetry and drift modeling).
+
+This README covers the **core drift modeling system**, but the overarching CESARops ecosystem consists of the following modular repositories:
+
+*   **Orchestration & UI**: 
+    *   [cesarops-orchestration](https://github.com/festeraeb/cesarops-orchestration): Forge, gates, mission control, fleet components (no model weights).
+*   **Inference & AI**: 
+    *   [cesarops-inference](https://github.com/festeraeb/cesarops-inference): CESARops distributed inference — scheduler, API, Forge fleet adapters.
+    *   [nauti-inferer](https://github.com/festeraeb/nauti-inferer): LLM inference engine (native Rust serve path).
+    *   [nauti-inferer-client](https://github.com/festeraeb/nauti-inferer-client): Desktop distributed AI inference client.
+*   **Missions & APIs**: 
+    *   [cesarops-missions](https://github.com/festeraeb/cesarops-missions): Lake missions — satellite, aeromag, detection CLIs.
+    *   [cesarops-photogrammetry](https://github.com/festeraeb/cesarops-photogrammetry): COLMAP→Rust incremental SfM / dense pipeline.
+    *   [gl-wrecks-api](https://github.com/festeraeb/gl-wrecks-api): Great Lakes Shipwreck Database (9,784 wrecks).
+*   **Validation**: 
+    *   [cesarops-scorecard](https://github.com/festeraeb/cesarops-scorecard): Public model×task scorecard.
+
+For an in-depth view of the system in action, the **interactive Lemonade page** (linked above) provides the overarching architecture, live worker metrics, hardware strategies, and measured benchmarks.
+
+---
+
 **Enhanced Drift Modeling System for Search and Rescue Operations**
 
 CESAROPS is a free, open-source drift modeling tool designed specifically for Search and Rescue (SAR) volunteer organizations. It provides robust, offline-capable drift predictions using oceanographic data and optional machine learning enhancement.
